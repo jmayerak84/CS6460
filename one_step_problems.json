@@ -1,0 +1,128 @@
+[
+  {
+    "id": "os-01",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "x - 9 = -4",
+    "variable": "x",
+    "solution": "5"
+  },
+  {
+    "id": "os-02",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "20 = 13 + y",
+    "variable": "y",
+    "solution": "7"
+  },
+  {
+    "id": "os-03",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "-8 + z = 3",
+    "variable": "z",
+    "solution": "11"
+  },
+  {
+    "id": "os-04",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-6 = x + 11",
+    "variable": "x",
+    "solution": "-17"
+  },
+  {
+    "id": "os-05",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "y + 7 = 15",
+    "variable": "y",
+    "solution": "8"
+  },
+  {
+    "id": "os-06",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-14 = -6 + z",
+    "variable": "z",
+    "solution": "-8"
+  },
+  {
+    "id": "os-07",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "4 + x = -9",
+    "variable": "x",
+    "solution": "-13"
+  },
+  {
+    "id": "os-08",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "12 = y - 5",
+    "variable": "y",
+    "solution": "17"
+  },
+  {
+    "id": "os-09",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "-4z = 28",
+    "variable": "z",
+    "solution": "-7"
+  },
+  {
+    "id": "os-10",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-45 = 9x",
+    "variable": "x",
+    "solution": "-5"
+  },
+  {
+    "id": "os-11",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "y/6 = -3",
+    "variable": "y",
+    "solution": "-18"
+  },
+  {
+    "id": "os-12",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "5 = z/-2",
+    "variable": "z",
+    "solution": "-10"
+  },
+  {
+    "id": "os-13",
+    "lesson": "one-step",
+    "form": "fractional-coefficient",
+    "variableSide": "left",
+    "equation": "(2/3)x = 10",
+    "variable": "x",
+    "solution": "15"
+  },
+  {
+    "id": "os-14",
+    "lesson": "one-step",
+    "form": "fractional-coefficient",
+    "variableSide": "right",
+    "equation": "-12 = (-3/4)y",
+    "variable": "y",
+    "solution": "16"
+  }
+]
