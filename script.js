@@ -1,6 +1,6 @@
 const state= {
     problem: null,
-    problemIndex: -1;
+    problemIndex: -1,
     equation: "",
     variable: "",
     steps: [],
@@ -17,7 +17,7 @@ async function loadData(){
     loadProblem(randomProblemIndex());
 }
 
-function randomPromblemIndex(){
+function randomProblemIndex(){
     let index;
     do {
         index = Math.floor(Math.random() * problems.length);
@@ -52,6 +52,76 @@ function toFunction(expression, variable){
     }
 }
 
+function solveLine(line, variable){
+    const sides = line.split("=");
+    if(sides.length !== 2 || !sides[0].trim() || !sides[1].trim()) return null;
+
+    const left = toFunction(sides[0], variable);
+    const right = toFunction(sides[1], variable);
+    if(!left || !right) return null;
+
+    try{
+        const f = v => left(v) - right(v);
+        const f0 = f(0), f1 = f(1), f2 = f(2);
+        const slope = f1 - f0;
+        if(!Number.isFinite(f0) || Math.abs(slope) < 1e-9) return null;
+        if(Math.abs((f2 - f1) - slope) > 1e-9) return null;
+        return -f0 / slope;
+    } catch(error){
+        return null;
+    }
+}
+
+function sameValue(a, b){
+    return Math.abs(a-b) < 1e-9;
+}
+
+function toNumber(text){
+    const f = toFunction(text, "x");
+    return f ? f(0) : NaN;
+}
+
+function isSolvedLine(line, variable){
+    const sides = line.split("=").map(s => s.trim().toLowerCase());
+    return sides.length === 2 && (sides[0] === variable || sides[1] ===variable) && !(sides[0].includes(variable) && sides[1].includes(variable));
+}
+
+function checkStep(i){
+    const text = state.steps[i].trim();
+    if(!text) return false;
+
+    const value = solveLine(text, state.variable);
+    const answer = toNumber(state.problem.solution);
+
+    if(value === null){
+        state.results[i] = {
+            status: "invalid",
+            message: `I can't read this line. Write one equation with a single = sign using ${state.variable}.`
+        };
+        return false;
+    }
+
+    state.stats.attempts++;
+    if(sameValue(value, answer)){
+        state.stats.correct++;
+        state.stats.streak++;
+        if(isSolvedLine(text, state.variable)){
+            state.solved = true;
+            state.stats.solved++;
+            state.results[i] = {status: "correct", message: `Solved! ${state.variable} = ${state.problem.solution}. Click "New Problem" to keep practicing.`};
+        } else{
+            state.results[i] = {status: "correct", message: "Valid step. Keep Going."};
+        }
+    } else {
+        state.results[i] = {
+            status: "wrong",
+            message: "This line isn't equivalent to the original equation. Check that you used the inverse operation on both sides."
+        };
+        state.stats.streak = 0;
+    }
+    return state.results[i].status === "correct";
+}
+
 function submitStep(){
     if (state.solved) return;
     const last = state.steps.length - 1;
@@ -78,7 +148,7 @@ function focusLastStep(){
 }
 
 function newProblem(){
-    loadProblem(randomPromblemIndex());
+    loadProblem(randomProblemIndex());
 }
 
 
@@ -139,7 +209,7 @@ function create(){
 
 
 document.getElementById("firstStep").addEventListener("click", addStep);
-document.getElementById("nextStep").addEventListener("click", addStep);
-document.getElementById("newProblem").addEventListener("click", newProblem0);
+document.getElementById("nextStep").addEventListener("click", submitStep);
+document.getElementById("newProblem").addEventListener("click", newProblem);
 
 loadData();
