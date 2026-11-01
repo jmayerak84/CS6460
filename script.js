@@ -104,10 +104,10 @@ function checkStep(i){
     state.stats.attempts++;
     if(sameValue(value, answer)){
         state.stats.correct++;
-        state.stats.streak++;
         if(isSolvedLine(text, state.variable)){
             state.solved = true;
             state.stats.solved++;
+            state.stats.streak++;
             state.results[i] = {status: "correct", message: `Solved! ${state.variable} = ${state.problem.solution}. Click "New Problem" to keep practicing.`};
         } else{
             state.results[i] = {status: "correct", message: "Valid step. Keep Going."};
@@ -148,6 +148,7 @@ function focusLastStep(){
 }
 
 function newProblem(){
+    if (!state.solved) state.stats.streak = 0;
     loadProblem(randomProblemIndex());
 }
 
