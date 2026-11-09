@@ -11,8 +11,17 @@ const state= {
 
 let problems = [];
 
+const LESSON_FILES = {
+    "one-step": "one_step_problems.json",
+    "two-step": "two_step_probelms.json",
+    "multi-step-1": "multi_step_1_problems.json",
+    "multi-step-2": "multi_step_2_problems.json"
+};
+
 async function loadData(){
-    const response = await fetch("two_step_problems.json"); 
+    const lesson = new URLSearchParams(window.location.search).get("lesson") || "one-step";
+    const file = LESSON_FILES[lesson] || LESSON_FILES["one-step"];
+    const response = await fetch(file); 
     problems = await response.json();
     loadProblem(randomProblemIndex());
 }
