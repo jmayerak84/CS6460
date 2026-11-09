@@ -1,0 +1,83 @@
+[
+  {
+    "id": "m1-01",
+    "lesson": "multi-step-1",
+    "form": "combining-like-terms-adjacent",
+    "variableSide": "left",
+    "equation": "3x + 4x + 5 = 33",
+    "variable": "x",
+    "solution": "4"
+  },
+  {
+    "id": "m1-02",
+    "lesson": "multi-step-1",
+    "form": "combining-like-terms-adjacent",
+    "variableSide": "right",
+    "equation": "-18 = 2y - 5y + 6",
+    "variable": "y",
+    "solution": "8"
+  },
+  {
+    "id": "m1-03",
+    "lesson": "multi-step-1",
+    "form": "combining-like-terms-split",
+    "variableSide": "left",
+    "equation": "6z + 7 - 2z = -9",
+    "variable": "z",
+    "solution": "-4"
+  },
+  {
+    "id": "m1-04",
+    "lesson": "multi-step-1",
+    "form": "combining-like-terms-split",
+    "variableSide": "right",
+    "equation": "25 = 3x - 8 + 8x",
+    "variable": "x",
+    "solution": "3"
+  },
+  {
+    "id": "m1-05",
+    "lesson": "multi-step-1",
+    "form": "distribution",
+    "variableSide": "left",
+    "equation": "4(y + 3) = 32",
+    "variable": "y",
+    "solution": "5"
+  },
+  {
+    "id": "m1-06",
+    "lesson": "multi-step-1",
+    "form": "distribution",
+    "variableSide": "right",
+    "equation": "-30 = 5(z - 2)",
+    "variable": "z",
+    "solution": "-4"
+  },
+  {
+    "id": "m1-07",
+    "lesson": "multi-step-1",
+    "form": "distribution-outside-constant",
+    "variableSide": "left",
+    "equation": "3(x - 4) + 7 = 1",
+    "variable": "x",
+    "solution": "2"
+  },
+  {
+    "id": "m1-08",
+    "lesson": "multi-step-1",
+    "form": "distribution-outside-constant",
+    "variableSide": "right",
+    "equation": "17 = -2(y + 5) + 9",
+    "variable": "y",
+    "solution": "-9"
+  },
+  {
+    "id": "m1-09",
+    "lesson": "multi-step-1",
+    "form": "variables-both-sides",
+    "variableSide": "both",
+    "equation": "5z + 3 = 2z - 12",
+    "variable": "z",
+    "solution": "-5"
+  }
+]

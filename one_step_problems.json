@@ -106,23 +106,5 @@
     "equation": "5 = z/-2",
     "variable": "z",
     "solution": "-10"
-  },
-  {
-    "id": "os-13",
-    "lesson": "one-step",
-    "form": "fractional-coefficient",
-    "variableSide": "left",
-    "equation": "(2/3)x = 10",
-    "variable": "x",
-    "solution": "15"
-  },
-  {
-    "id": "os-14",
-    "lesson": "one-step",
-    "form": "fractional-coefficient",
-    "variableSide": "right",
-    "equation": "-12 = (-3/4)y",
-    "variable": "y",
-    "solution": "16"
   }
 ]

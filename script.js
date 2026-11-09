@@ -12,7 +12,7 @@ const state= {
 let problems = [];
 
 async function loadData(){
-    const response = await fetch("one_step_problems.json"); 
+    const response = await fetch("two_step_problems.json"); 
     problems = await response.json();
     loadProblem(randomProblemIndex());
 }

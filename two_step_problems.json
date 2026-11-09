@@ -1,0 +1,137 @@
+[
+  {
+    "id": "ts-01",
+    "lesson": "two-step",
+    "form": "multiplication-addition",
+    "variableSide": "left",
+    "equation": "3x + 5 = 20",
+    "variable": "x",
+    "solution": "5"
+  },
+  {
+    "id": "ts-02",
+    "lesson": "two-step",
+    "form": "multiplication-addition",
+    "variableSide": "left",
+    "equation": "7 + 2y = -9",
+    "variable": "y",
+    "solution": "-8"
+  },
+  {
+    "id": "ts-03",
+    "lesson": "two-step",
+    "form": "multiplication-addition",
+    "variableSide": "right",
+    "equation": "-14 = 4z + 6",
+    "variable": "z",
+    "solution": "-5"
+  },
+  {
+    "id": "ts-04",
+    "lesson": "two-step",
+    "form": "multiplication-subtraction",
+    "variableSide": "left",
+    "equation": "5x - 8 = -23",
+    "variable": "x",
+    "solution": "-3"
+  },
+  {
+    "id": "ts-05",
+    "lesson": "two-step",
+    "form": "multiplication-subtraction",
+    "variableSide": "right",
+    "equation": "13 = -3y - 2",
+    "variable": "y",
+    "solution": "-5"
+  },
+  {
+    "id": "ts-06",
+    "lesson": "two-step",
+    "form": "division-addition",
+    "variableSide": "left",
+    "equation": "z/4 + 3 = 9",
+    "variable": "z",
+    "solution": "24"
+  },
+  {
+    "id": "ts-07",
+    "lesson": "two-step",
+    "form": "division-addition",
+    "variableSide": "left",
+    "equation": "-5 + x/3 = 2",
+    "variable": "x",
+    "solution": "21"
+  },
+  {
+    "id": "ts-08",
+    "lesson": "two-step",
+    "form": "division-addition",
+    "variableSide": "right",
+    "equation": "10 = y/-2 + 6",
+    "variable": "y",
+    "solution": "-8"
+  },
+  {
+    "id": "ts-09",
+    "lesson": "two-step",
+    "form": "division-subtraction",
+    "variableSide": "left",
+    "equation": "z/5 - 7 = -4",
+    "variable": "z",
+    "solution": "15"
+  },
+  {
+    "id": "ts-10",
+    "lesson": "two-step",
+    "form": "division-subtraction",
+    "variableSide": "right",
+    "equation": "-1 = x/6 - 3",
+    "variable": "x",
+    "solution": "12"
+  },
+  {
+    "id": "ts-11",
+    "lesson": "two-step",
+    "form": "grouped-addition",
+    "variableSide": "left",
+    "equation": "(y + 4)/3 = 5",
+    "variable": "y",
+    "solution": "11"
+  },
+  {
+    "id": "ts-12",
+    "lesson": "two-step",
+    "form": "grouped-addition",
+    "variableSide": "left",
+    "equation": "(-2 + z)/4 = -3",
+    "variable": "z",
+    "solution": "-10"
+  },
+  {
+    "id": "ts-13",
+    "lesson": "two-step",
+    "form": "grouped-addition",
+    "variableSide": "right",
+    "equation": "6 = (x + 9)/2",
+    "variable": "x",
+    "solution": "3"
+  },
+  {
+    "id": "ts-14",
+    "lesson": "two-step",
+    "form": "grouped-subtraction",
+    "variableSide": "left",
+    "equation": "(y - 8)/5 = 2",
+    "variable": "y",
+    "solution": "18"
+  },
+  {
+    "id": "ts-15",
+    "lesson": "two-step",
+    "form": "grouped-subtraction",
+    "variableSide": "right",
+    "equation": "-4 = (z - 3)/7",
+    "variable": "z",
+    "solution": "-25"
+  }
+]
