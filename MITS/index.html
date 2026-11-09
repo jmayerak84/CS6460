@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MITSy</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!--Header-->
+        <header class="header">
+            <div class="appName">
+                <div>
+                    <h1 class="appTitle">MITSy - Mathematical Intelligent Tutoring System</h1>
+                    <p class="appSubtitle">Equation Step Checker</p>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat">Solved: <strong id="statSolved">0</strong></div> 
+                <div class="stat">Streak: <strong id="statStreak">0</strong></div>
+                <div class="stat">Accuracy: <strong id="statAccuracy">100%</strong></div>
+            </div>
+        </header>
+
+        <!--Problem Area-->
+        <main class="problemArea">
+            <section class="workSpace">
+                <!--Equation Area-->
+                <div class="equationArea">
+                    <div>
+                        <div class="label equationLabel">Equation</div>
+                        <p class="currentEquation" id="currentEquation"></p>
+                    </div>
+                    <div class="variableArea">
+                        <div class="label">Variable</div>
+                        <div class="variableValue" id="variableValue"></div>
+                    </div>
+                </div>
+                <!--Steps Area-->
+                <div class="stepsArea">
+                    <div class="emptySteps" id="emptySteps">
+                        <p class="emptyLabel">No steps entered yet.</p>
+                        <p class="emptyHint">Click "Add First Step" to type your first line in solving <span id="emptyEquation"></span>.</p>
+                        <button class="btn btnOne" id="firstStep">Add First Step</button>
+                    </div>
+                    <div id="stepsList"></div>
+                </div>
+                <!--Footer-->
+                <div class="footer">
+                    <button class="btn btnTwo" id="nextStep">Add Next Step</button>
+                    <button class="btn btnTwo" id="newProblem">New Problem</button>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>   0
