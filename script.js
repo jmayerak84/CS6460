@@ -21,6 +21,11 @@ const state= {
     history: [],
     mastered: false,
     completionCode: "",
+    mode: "guided",
+    hintsUsed: 0,
+    guidedStreak: 0,
+    missStreak: 0,
+    modeNotice: "",
     stats: {solved: 0, streak: 0, correct: 0, attempts: 0}
 };
 
@@ -39,6 +44,10 @@ let lessonCodes = {};
 const MASTERY_WINDOW = 5;
 const MASTERY_NEEDED = 4;
 
+let hints = {};
+const GUIDED_TO_MASTERY = 2;
+const MASTERY_TO_GUIDED = 2;
+
 
 
 
@@ -46,12 +55,14 @@ const MASTERY_NEEDED = 4;
 async function loadData(){
     const lesson = new URLSearchParams(window.location.search).get("lesson") || "one-step";
     state.lesson = LESSON_FILES[lesson] ? lesson : "one-step";
-    const [problemRes, codeRes] = await Promise.all([
+    const [problemRes, codeRes, hintRes] = await Promise.all([
         fetch(LESSON_FILES[state.lesson]),
-        fetch("completion_codes.json")
+        fetch("completion_codes.json"),
+        fetch("hints.json")
     ]);
     problems = await problemRes.json();
     lessonCodes = await codeRes.json();
+    hints = await hintRes.json();
     loadProblem(randomProblemIndex());
 }
 
@@ -75,6 +86,7 @@ function loadProblem(index){
     state.results = [];
     state.solved = false;
     state.hadError = false;
+    state.hintsUsed = 0;
     create();
 }
 
@@ -176,7 +188,7 @@ function checkStep(i){
             state.solved = true;
             state.stats.solved++;
             state.stats.streak++;
-            recordResults(!state.hadError);
+            finishProblem(!state.hadError && state.hintsUsed === 0);
             state.results[i] = {status: "correct", message: `Solved! ${state.variable} = ${state.problem.solution}. Click "New Problem" to keep practicing.`};
         } else{
             state.results[i] = {status: "correct", message: "Valid step. Keep Going."};
@@ -200,6 +212,15 @@ function checkStep(i){
 
 function submitStep(){
     if (state.solved) return;
+
+
+    if(state.mode === "mastery"){
+        const last = state.steps.length - 1;
+        if (last >= 0 && state.steps[last].trim() === "") { focusLastStep(); return;}
+        addStep();
+        return;
+    }
+
     const last = state.steps.length - 1;
     if (last >= 0){
         const ok = checkStep(last);
@@ -225,6 +246,7 @@ function focusLastStep(){
     if (inputs.length) inputs[inputs.length - 1].focus();
 }
 
+
 function recordResults(correct){
     state.history.push(correct);
     if(state.history.length > MASTERY_WINDOW) state.history.shift();
@@ -238,11 +260,100 @@ function recordResults(correct){
 
 
 
+const MIN_LINES = {"one-step": 1};
+
+function submitSolution(){
+    if(state.mode !== "mastery" || state.solved) return;
+
+
+    state.steps = state.steps.filter(s => s.trim() !== "");
+    state.results = [];
+    if (state.steps.length === 0) { create(); return;}
+
+    const answer = toNumber(state.problem.solution);
+    const last = state.steps.length - 1;
+
+    for(let i = 0; i <= last; i++){
+        const value = solveLine(state.steps[i].trim(), state.variable);
+
+        if(value === null){
+            
+            state.results[i] = {status: "invalid", message: `I can't read this line. Write one equation with a single = sign using ${state.variable}.`};
+            create();
+            return;
+        }
+        if(!sameValue(value, answer)){
+
+            state.results[i] = {status: "wrong", message: "This is the first line that isn't equivalent to the original equation. Check the step that led to it."};
+            state.stats.attempts++;
+            state.stats.streak = 0;
+            state.hadError = true;
+            create();
+            return;
+        }
+        state.results[i] = {status: "correct", message: ""};
+    }
+
+
+    if(!isSolvedLine(state.steps[last], state.variable)){
+        state.results[last] = {status: "invalid", message: `Everything checks out so far, but you haven't finished. Keep going until ${state.variable} is alone.`};
+        create();
+        return;
+    }
+    const needed = MIN_LINES[state.lesson] || 2;
+    if(state.steps.length < needed){
+        state.results[last] = {status: "invalid", message: "Show at least one step of your work before your final answer."}
+        create();
+        return;
+    }
+
+
+    state.stats.attempts++;
+    state.stats.correct++;
+    state.solved = true;
+    state.stats.solved++;
+    state.stats.streak++;
+    state.results[last] = {status: "correct", message: `Solved! ${state.variable} = ${state.problem.solution}. Click "New Problem" to keep practicing.`};
+    finishProblem(!state.hadError);
+    create();
+}
+
+
+
+function finishProblem(clean){
+    state.modeNotice = "";
+    if(state.mode === "mastery"){
+        recordResults(clean);
+        state.missStreak = clean ? 0 : state.missStreak + 1;
+        if(state.missStreak >= MASTERY_TO_GUIDED && !state.mastered){
+            state.mode = "guided";
+            state.missStreak = 0;
+            state.modeNotice = "Let's practice with hints for a bit. You're back in Guided mode.";
+        }
+    } else{
+        state.guidedStreak = clean ? state.guidedStreak + 1 : 0;
+        if(state.guidedStreak >= GUIDED_TO_MASTERY){
+            state.mode = "mastery";
+            state.guidedStreak = 0;
+            state.modeNotice = "Nice work! You've moved up to Mastery mode: no hints, and these problems count toward your code.";
+        }
+    }
+}
+
+
+function showHint(){
+    if(state.mode !== "guided" || state.solved) return;
+    const list = hints[state.problem.form] || hints["default"];
+    if(state.hintsUsed < list.length) state.hintsUsed++;
+    create();
+}
+
+
 
 function newProblem(){
     if (!state.solved) state.stats.streak = 0;
     if(!state.solved && state.steps.some(s => s.trim() !== "")){
-        recordResults(false);
+        finishProblem(false);
     }
     loadProblem(randomProblemIndex());
 }
@@ -286,7 +397,9 @@ function create(){
         input.type = "text";
         input.className = "stepInput" + (result ? " " + result.status : "");
         input.value = text;
-        input.placeholder = `Step ${i + 1}: type your next equation and press Enter`;
+        input.placeholder = state.mode === "mastery"
+            ? `Line ${i + 1}: type your work (Enter adds a new line)`
+            : `Step ${i + 1}: type your next equation and press Enter`;
         input.disabled = state.solved;
 
         
@@ -303,7 +416,7 @@ function create(){
         list.append(row);
 
         
-        if(result){
+        if(result && result.message){
             const feedback = document.createElement("p");
             feedback.className = "stepFeedback " + result.status;
             feedback.textContent = result.message;
@@ -324,20 +437,51 @@ function drawMastery(){
         box.className = "mastery done";
         box.innerHTML = `Mastery Reached! Your completion code is <strong>${state.completionCode}</strong>. ` + 
             `Enter it in the Mastery Check quiz in Canvas. You can keep practicing here.`;
-        return;
+    } else if(state.mode === "guided"){
+
+        box.className = "mastery";
+        box.innerHTML = `<span class="modeBadge guided">Guided</span>` + 
+            `<span>Solve ${GUIDED_TO_MASTERY} problems in a row with no mistakes and no hints to move to Mastery ` + 
+            `(${state.guidedStreak}/${GUIDED_TO_MASTERY}).</span>`;
+    } else{
+
+        box.className = "mastery";
+        box.innerHTML = `<span class="modeBadge">Mastery</span>`;
+        const label = document.createElement("span");
+        label.textContent = `Write your full solution, then click Submit. Solve ${MASTERY_NEEDED} of your last ${MASTERY_WINDOW} with no mistakes:`;
+        box.append(label);
+        for(let i = 0; i < MASTERY_WINDOW; i++){
+            const dot = document.createElement("span");
+            const result = state.history[i];
+            dot.className = "dot" + (result === true ? " hit" : result === false ? " miss" : "");
+            box.append(dot);
+        }
     }
 
-    box.className = "mastery";
-    const label = document.createElement("span");
-    label.textContent = `Solve ${MASTERY_NEEDED} of your last ${MASTERY_WINDOW} problems with no mistakes:`;
-    box.append(label);
 
-    for (let i = 0; i < MASTERY_WINDOW; i++){
-        const dot = document.createElement("span");
-        const result = state.history[i];
-        dot.className = "dot" + (result === true ? " hit" : result === false ? " miss" : "");
-        box.append(dot);
-    } 
+    const notice = document.getElementById("modeNotice");
+    notice.textContent = state.modeNotice;
+    notice.hidden = !state.modeNotice;
+
+
+    const hintBox = document.getElementById("hintBox");
+    const list = hints[state.problem.form] || hints["default"] || [];
+    hintBox.innerHTML = "";
+    list.slice(0, state.hintsUsed).forEach((text, i) => {
+        const p = document.createElement("p");
+        p.textContent = `Hint ${i + 1}: ` + text.replaceAll("{variable}", state.variable);
+        hintBox.append(p);
+    });
+    hintBox.hidden = state.hintsUsed === 0;
+
+    
+    const submitBtn = document.getElementById("submitSolution");
+    submitBtn.hidden = state.mode !== "mastery";
+    submitBtn.disabled = state.solved || state.steps.length === 0;
+
+    const hintBtn = document.getElementById("hintBtn");
+    hintBtn.hidden = state.mode !== "guided";
+    hintBtn.disabled = state.solved || state.hintsUsed >= list.length;
 }
 
 
@@ -346,5 +490,7 @@ function drawMastery(){
 document.getElementById("firstStep").addEventListener("click", addStep);
 document.getElementById("nextStep").addEventListener("click", submitStep);
 document.getElementById("newProblem").addEventListener("click", newProblem);
+document.getElementById("hintBtn").addEventListener("click", showHint);
+document.getElementById("submitSolution").addEventListener("click", submitSolution);
 
 loadData();

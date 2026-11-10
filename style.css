@@ -318,3 +318,40 @@ button:focus-visible{
     font-family: var(--mono);
     font-size: 1rem;
 }
+
+.modeBadge{
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: #fff;
+    background: var(--accent);
+}
+.modeBadge.guided{
+    color: var(--accent-soft);
+    background: #241333;
+    border: 1px solid var(--border-accent);
+}
+.modeNotice{
+    margin: 10px 0 0;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    color: var(--accent-soft);
+    border: 1px solid var(--border-accent);
+    border-radius: 8px;
+}
+.hintBox p{
+    margin: 4px 0;
+}
+
+.footer{
+    gap: 10px;
+}
+#newProblem{
+    margin-left: auto;
+}
+[hidden]{
+    display: none !important;
+}
