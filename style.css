@@ -282,3 +282,39 @@ button:focus-visible{
     color: var(--error);
 }
 
+.mastery{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--header-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+.dot{
+    width: 14px;
+    height:14px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+}
+.dot.hit{
+    background: var(--success);
+    border-color: var(--success);
+}
+.dot.miss{
+    background: var(--error);
+    border-color: var(--error);
+}
+.mastery.done{
+    display: block;
+    color: var(--success);
+    border-color: var(--success);
+}
+.mastery.done strong{
+    font-family: var(--mono);
+    font-size: 1rem;
+}
