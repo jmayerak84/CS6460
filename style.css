@@ -342,6 +342,14 @@ button:focus-visible{
     border: 1px solid var(--border-accent);
     border-radius: 8px;
 }
+.hintBox{
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    background: #241333;
+    border: 1px solid var(--border-accent);
+    border-radius: 8px;
+}
 .hintBox p{
     margin: 4px 0;
 }
