@@ -6,7 +6,13 @@
     "variableSide": "left",
     "equation": "x - 9 = -4",
     "variable": "x",
-    "solution": "5"
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "x = 5",
+        "why": "Add 9 to both sides"
+      }
+    ]
   },
   {
     "id": "os-02",
@@ -15,7 +21,13 @@
     "variableSide": "right",
     "equation": "20 = 13 + y",
     "variable": "y",
-    "solution": "7"
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "7 = y",
+        "why": "Subtract 13 from both sides"
+      }
+    ]
   },
   {
     "id": "os-03",
@@ -24,7 +36,13 @@
     "variableSide": "left",
     "equation": "-8 + z = 3",
     "variable": "z",
-    "solution": "11"
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "z = 11",
+        "why": "Add 8 to both sides"
+      }
+    ]
   },
   {
     "id": "os-04",
@@ -33,7 +51,13 @@
     "variableSide": "right",
     "equation": "-6 = x + 11",
     "variable": "x",
-    "solution": "-17"
+    "solution": "-17",
+    "steps": [
+      {
+        "equation": "-17 = x",
+        "why": "Subtract 11 from both sides"
+      }
+    ]
   },
   {
     "id": "os-05",
@@ -42,7 +66,13 @@
     "variableSide": "left",
     "equation": "y + 7 = 15",
     "variable": "y",
-    "solution": "8"
+    "solution": "8",
+    "steps": [
+      {
+        "equation": "y = 8",
+        "why": "Subtract 7 from both sides"
+      }
+    ]
   },
   {
     "id": "os-06",
@@ -51,7 +81,13 @@
     "variableSide": "right",
     "equation": "-14 = -6 + z",
     "variable": "z",
-    "solution": "-8"
+    "solution": "-8",
+    "steps": [
+      {
+        "equation": "-8 = z",
+        "why": "Add 6 to both sides"
+      }
+    ]
   },
   {
     "id": "os-07",
@@ -60,7 +96,13 @@
     "variableSide": "left",
     "equation": "4 + x = -9",
     "variable": "x",
-    "solution": "-13"
+    "solution": "-13",
+    "steps": [
+      {
+        "equation": "x = -13",
+        "why": "Subtract 4 from both sides"
+      }
+    ]
   },
   {
     "id": "os-08",
@@ -69,7 +111,13 @@
     "variableSide": "right",
     "equation": "12 = y - 5",
     "variable": "y",
-    "solution": "17"
+    "solution": "17",
+    "steps": [
+      {
+        "equation": "17 = y",
+        "why": "Add 5 to both sides"
+      }
+    ]
   },
   {
     "id": "os-09",
@@ -78,7 +126,13 @@
     "variableSide": "left",
     "equation": "-4z = 28",
     "variable": "z",
-    "solution": "-7"
+    "solution": "-7",
+    "steps": [
+      {
+        "equation": "z = -7",
+        "why": "Divide both sides by -4"
+      }
+    ]
   },
   {
     "id": "os-10",
@@ -87,7 +141,13 @@
     "variableSide": "right",
     "equation": "-45 = 9x",
     "variable": "x",
-    "solution": "-5"
+    "solution": "-5",
+    "steps": [
+      {
+        "equation": "-5 = x",
+        "why": "Divide both sides by 9"
+      }
+    ]
   },
   {
     "id": "os-11",
@@ -96,7 +156,13 @@
     "variableSide": "left",
     "equation": "y/6 = -3",
     "variable": "y",
-    "solution": "-18"
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "y = -18",
+        "why": "Multiply both sides by 6"
+      }
+    ]
   },
   {
     "id": "os-12",
@@ -105,6 +171,12 @@
     "variableSide": "right",
     "equation": "5 = z/-2",
     "variable": "z",
-    "solution": "-10"
+    "solution": "-10",
+    "steps": [
+      {
+        "equation": "-10 = z",
+        "why": "Multiply both sides by -2"
+      }
+    ]
   }
 ]
