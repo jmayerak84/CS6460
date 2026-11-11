@@ -363,3 +363,18 @@ button:focus-visible{
 [hidden]{
     display: none !important;
 }
+
+.workedEquation{
+    flex:1;
+    padding:  10px 12px;
+    font: 1.1rem var(--mono);
+    color: var(--text);
+    background: var(--header-bg);
+    border: 1px solid var(--border-accent);
+    border-radius: 8px;
+}
+.workedWhy{
+    margin: -4px 0 12px 40px;
+    font-size: 0.85rem;
+    color: var(--accent-soft);
+}

@@ -21,7 +21,12 @@ const state= {
     history: [],
     mastered: false,
     completionCode: "",
-    mode: "guided",
+    mode: "worked",
+    revealed: 0,
+    blankIndex: 0,
+    fadedAnswer: "",
+    fadedResult: null,
+    fadedDone: 0,
     hintsUsed: 0,
     guidedStreak: 0,
     missStreak: 0,
@@ -47,6 +52,13 @@ const MASTERY_NEEDED = 4;
 let hints = {};
 const GUIDED_TO_MASTERY = 2;
 const MASTERY_TO_GUIDED = 2;
+const FADED_TO_GUIDED = 2;
+
+
+
+function modeAfterWorked(){
+    return state.lesson === "one-step" ? "guided" : "faded";
+}
 
 
 
@@ -87,6 +99,12 @@ function loadProblem(index){
     state.solved = false;
     state.hadError = false;
     state.hintsUsed = 0;
+    state.revealed = 0;
+    
+    const stepCount = (problem.steps || []).length;
+    state.blankIndex = Math.max(0, stepCount - 1 - state.fadedDone);
+    state.fadedAnswer = "";
+    state.fadedResult = null;    
     create();
 }
 
@@ -214,6 +232,9 @@ function submitStep(){
     if (state.solved) return;
 
 
+    if(state.mode === "faded"){ checkFaded(); return;}
+
+   
     if(state.mode === "mastery"){
         const last = state.steps.length - 1;
         if (last >= 0 && state.steps[last].trim() === "") { focusLastStep(); return;}
@@ -256,6 +277,64 @@ function recordResults(correct){
         const codes = lessonCodes[state.lesson];
         state.completionCode = codes[Math.floor(Math.random() * codes.length)];
     }
+}
+
+
+function checkFaded(){
+    const text = state.fadedAnswer.trim();
+    if (!text) return;
+
+    const steps = state.problem.steps;
+    const expected = steps[state.blankIndex];
+    const isLastStep = state.blankIndex === steps.length - 1;
+    const value = solveLine(text, state.variable);
+    const answer = toNumber(state.problem.solution);
+
+    if (value === null) {
+        state.fadedResult = {status: "invalid", message: `I can't read this line. Write one equation with a single = sign using ${state.variable}.`};
+    } else if (!sameValue(value, answer)) {
+        state.fadedResult = {status: "wrong", message: "This step isn't equivalent to the line above it. Look at the line above and think about what comes next."};
+    } else if (!isLastStep && isSolvedLine(text, state.variable)) {
+        // No skipping ahead to the final answer from a middle step
+        state.fadedResult = {status: "invalid", message: "That's the final answer. What step comes before it?"};
+    } else if (isLastStep && !isSolvedLine(text, state.variable)) {
+        // The last step has to finish the problem
+        state.fadedResult = {status: "invalid", message: `That's true, but you're not finished. Get ${state.variable} alone.`};
+    } else if (text.replace(/\s+/g, "") === previousLine().replace(/\s+/g, "")) {
+        // Copying the line above isn't a step
+        state.fadedResult = {status: "invalid", message: "That's the same as the line above. What changes in the next step?"};
+    } else {
+        // Correct: compare with the example, then reveal the rest of the solution
+        const same = text.replace(/\s+/g, "") === expected.equation.replace(/\s+/g, "");
+        state.fadedResult = {
+            status: "correct",
+            message: same
+                ? `Correct! (${expected.why})`
+                : `Correct! The example wrote: ${expected.equation} (${expected.why}).`
+        };
+        state.solved = true;
+    }
+    create();
+    if (!state.solved) focusFadedInput();
+}
+
+
+function previousLine(){
+    return state.blankIndex === 0 ? state.equation : state.problem.steps[state.blankIndex -1].equation;
+}
+
+function focusFadedInput(){
+    const input = document.querySelector(".stepInput");
+    if(input) input.focus();
+}
+
+
+function showNextStep(){
+    if(state.mode !== "worked" || state.solved) return;
+    const steps = state.problem.steps || [];
+    if (state.revealed < steps.length) state.revealed++;
+    if(state.revealed === steps.length) state.solved = true;
+    create();
 }
 
 
@@ -351,6 +430,33 @@ function showHint(){
 
 
 function newProblem(){
+
+    if(state.mode === "worked"){
+        if(state.solved){
+            state.mode = modeAfterWorked();
+            state.modeNotice = state.mode === "faded" 
+                ? "You've seen how it's done. Now fill in the missing step of each example."
+                : "You've seen how it's done. Now it's your turn: solve each step yourself. Hints are available if you need them.";
+        }
+        loadProblem(randomProblemIndex());
+        return;
+    }
+
+    
+    if(state.mode === "faded"){
+        state.modeNotice = "";
+        if(state.solved){
+            state.fadedDone++;
+            if(state.fadedDone >= FADED_TO_GUIDED){
+                state.mode = "guided";
+                state.modeNotice = "Great work! Now it's your turn: solve each step yourself. Hints are available if you need them.";
+            }
+        }
+        loadProblem(randomProblemIndex());
+        if(state.mode === "faded") focusFadedInput();
+        return;
+    }
+
     if (!state.solved) state.stats.streak = 0;
     if(!state.solved && state.steps.some(s => s.trim() !== "")){
         finishProblem(false);
@@ -367,7 +473,7 @@ function create(){
     document.getElementById("currentEquation").textContent = state.equation;
     document.getElementById("variableValue").textContent = state.variable;
     document.getElementById("emptyEquation").textContent = state.equation;
-    document.getElementById("emptySteps").hidden = state.steps.length > 0;
+    document.getElementById("emptySteps").hidden = state.mode === "worked" || state.mode === "faded" || state.steps.length > 0;
 
     
     const {solved, streak, correct, attempts} = state.stats;
@@ -382,6 +488,18 @@ function create(){
 
     const list = document.getElementById("stepsList");
     list.innerHTML = "";
+    
+    
+    if(state.mode === "worked"){
+        drawWorked(list);
+        return;
+    }
+    
+    
+    if(state.mode === "faded"){
+        drawFaded(list);
+        return;
+    }
     state.steps.forEach((text, i) => {
         const result = state.results[i];
 
@@ -429,6 +547,99 @@ function create(){
 
 
 
+function drawFaded(list){
+    const steps = state.problem.steps || [];
+ 
+    steps.forEach((step, i) => {
+        if (i > state.blankIndex && !state.solved) return;   // steps after the blank stay hidden until it's filled
+ 
+        const row = document.createElement("div");
+        row.className = "stepRow";
+        const number = document.createElement("span");
+        number.className = "stepNumber";
+        number.textContent = i + 1;
+        row.append(number);
+ 
+        if (i === state.blankIndex) {
+            // The blank: an input box the student fills in
+            const input = document.createElement("input");
+            input.type = "text";
+            input.className = "stepInput" + (state.fadedResult ? " " + state.fadedResult.status : "");
+            input.value = state.fadedAnswer;
+            input.placeholder = `Step ${i + 1}: fill in the missing step and press Enter`;
+            input.disabled = state.solved;
+            input.addEventListener("input", () => {
+                state.fadedAnswer = input.value;
+                state.fadedResult = null;
+            });
+            input.addEventListener("keydown", (event) => {
+                if (event.key === "Enter") checkFaded();
+            });
+            row.append(input);
+            list.append(row);
+ 
+            if (state.fadedResult) {
+                const feedback = document.createElement("p");
+                feedback.className = "stepFeedback " + state.fadedResult.status;
+                feedback.textContent = state.fadedResult.message;
+                list.append(feedback);
+            }
+        } else {
+            // A shown step, with its reason
+            const equation = document.createElement("div");
+            equation.className = "workedEquation";
+            equation.textContent = step.equation;
+            row.append(equation);
+            list.append(row);
+ 
+            const why = document.createElement("p");
+            why.className = "workedWhy";
+            why.textContent = step.why;
+            list.append(why);
+        }
+    });
+ 
+    if (state.solved) {
+        const done = document.createElement("p");
+        done.className = "stepFeedback correct";
+        done.textContent = `That's the full solution: ${state.variable} = ${state.problem.solution}. Click "New Problem" to continue.`;
+        list.append(done);
+    }
+}
+
+
+function drawWorked(list){
+    const steps = state.problem.steps || [];
+    steps.slice(0, state.revealed).forEach((step, i) => {
+        const row = document.createElement("div");
+        row.className = "stepRow";
+
+        const number = document.createElement("span");
+        number.className = "stepNumber";
+        number.textContent = i + 1;
+
+        const equation = document.createElement("div");
+        equation.className = "workedEquation";
+        equation.textContent = step.equation;
+
+        row.append(number, equation);
+        list.append(row);
+
+        const why = document.createElement("p");
+        why.className = "workedWhy";
+        why.textContent = step.why;
+        list.append(why);
+    });
+
+    if(state.solved){
+        const done = document.createElement("p");
+        done.className = "stepFeedback correct";
+        done.textContent = `That's the full solution: ${state.variable} = ${state.problem.solution}. Click "New Problem" to try one yourself.`;
+        list.append(done);
+    }
+}
+
+
 function drawMastery(){
     const box = document.getElementById("mastery");
     box.innerHTML = "";
@@ -436,7 +647,18 @@ function drawMastery(){
     if(state.mastered){
         box.className = "mastery done";
         box.innerHTML = `Mastery Reached! Your completion code is <strong>${state.completionCode}</strong>. ` + 
-            `Enter it in the Mastery Check quiz in Canvas. You can keep practicing here.`;
+            `Enter it below MITSy. You can keep practicing here.`;
+    } else if(state.mode === "worked"){
+        
+        box.className = "mastery";
+        box.innerHTML = `<span class="modeBadge guided">Worked Example</span>` + 
+            `<span>Click "Show Next Step" to see how this problem is solved, one step at a time.</span>`;
+    } else if(state.mode === "faded"){
+        
+        box.className = "mastery";
+        box.innerHTML = `<span class="modeBadge guided">Faded</span>` + 
+            `<span>Fill in the missing step. Complete ${FADED_TO_GUIDED} examples to move to Guided `+ 
+            `(${state.fadedDone}/${FADED_TO_GUIDED}).</span>`;
     } else if(state.mode === "guided"){
 
         box.className = "mastery";
@@ -475,6 +697,15 @@ function drawMastery(){
     hintBox.hidden = state.hintsUsed === 0;
 
     
+    const showBtn = document.getElementById("showStep");
+    showBtn.hidden = state.mode !== "worked";
+    showBtn.disabled = state.solved;
+    const nextBtn = document.getElementById("nextStep");
+    nextBtn.hidden = state.mode === "worked";
+    nextBtn.textContent = state.mode === "faded" ? "Check Step" : "Add Next Step";
+    nextBtn.disabled = state.solved;
+
+
     const submitBtn = document.getElementById("submitSolution");
     submitBtn.hidden = state.mode !== "mastery";
     submitBtn.disabled = state.solved || state.steps.length === 0;
@@ -492,5 +723,6 @@ document.getElementById("nextStep").addEventListener("click", submitStep);
 document.getElementById("newProblem").addEventListener("click", newProblem);
 document.getElementById("hintBtn").addEventListener("click", showHint);
 document.getElementById("submitSolution").addEventListener("click", submitSolution);
+document.getElementById("showStep").addEventListener("click", showNextStep);
 
 loadData();
