@@ -8,7 +8,7 @@
     --muted: #a1a1aa;
     --accent: #0072b2;              /*9333ea*/
     --accent-soft: #9fd3f5;         /*c084fc*/
-    --accent-dark: #0b2388;
+    --accent-dark: #0b2338;
     --success: #56b4e9;             /*#34d399*/
     --error: #e69f00;               /*#f87171*/
     --fonts: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -323,14 +323,14 @@ button:focus-visible{
     border-color: var(--success);
 }
 .dot.hit::after{
-    content: "\2713\00A0";
+    content: "\2713";
 }
 .dot.miss{
     background: var(--error);
     border-color: var(--error);
 }
 .dot.miss::after{
-    content: "\2715\00A0";
+    content: "\2715";
 }
 .mastery.done{
     display: block;
