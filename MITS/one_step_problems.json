@@ -1,110 +1,7502 @@
 [
   {
-    "id": "os-01",
+    "id": "os-001",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "16 + z = 7",
+    "variable": "z",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "z = -9",
+        "why": "Subtract 16 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-002",
     "lesson": "one-step",
     "form": "subtraction",
     "variableSide": "left",
-    "equation": "x - 9 = -4",
-    "variable": "x",
-    "solution": "5"
+    "equation": "p - (-29) = 42",
+    "variable": "p",
+    "solution": "13",
+    "steps": [
+      {
+        "equation": "p = 13",
+        "why": "Add -29 to both sides"
+      }
+    ]
   },
   {
-    "id": "os-02",
+    "id": "os-003",
     "lesson": "one-step",
     "form": "addition",
     "variableSide": "right",
-    "equation": "20 = 13 + y",
-    "variable": "y",
-    "solution": "7"
+    "equation": "39 = 26 + m",
+    "variable": "m",
+    "solution": "13",
+    "steps": [
+      {
+        "equation": "13 = m",
+        "why": "Subtract 26 from both sides"
+      }
+    ]
   },
   {
-    "id": "os-03",
-    "lesson": "one-step",
-    "form": "addition",
-    "variableSide": "left",
-    "equation": "-8 + z = 3",
-    "variable": "z",
-    "solution": "11"
-  },
-  {
-    "id": "os-04",
-    "lesson": "one-step",
-    "form": "addition",
-    "variableSide": "right",
-    "equation": "-6 = x + 11",
-    "variable": "x",
-    "solution": "-17"
-  },
-  {
-    "id": "os-05",
-    "lesson": "one-step",
-    "form": "addition",
-    "variableSide": "left",
-    "equation": "y + 7 = 15",
-    "variable": "y",
-    "solution": "8"
-  },
-  {
-    "id": "os-06",
-    "lesson": "one-step",
-    "form": "addition",
-    "variableSide": "right",
-    "equation": "-14 = -6 + z",
-    "variable": "z",
-    "solution": "-8"
-  },
-  {
-    "id": "os-07",
-    "lesson": "one-step",
-    "form": "addition",
-    "variableSide": "left",
-    "equation": "4 + x = -9",
-    "variable": "x",
-    "solution": "-13"
-  },
-  {
-    "id": "os-08",
+    "id": "os-004",
     "lesson": "one-step",
     "form": "subtraction",
     "variableSide": "right",
-    "equation": "12 = y - 5",
+    "equation": "-21 = y - 30",
     "variable": "y",
-    "solution": "17"
+    "solution": "9",
+    "steps": [
+      {
+        "equation": "9 = y",
+        "why": "Add 30 to both sides"
+      }
+    ]
   },
   {
-    "id": "os-09",
-    "lesson": "one-step",
-    "form": "multiplication",
-    "variableSide": "left",
-    "equation": "-4z = 28",
-    "variable": "z",
-    "solution": "-7"
-  },
-  {
-    "id": "os-10",
+    "id": "os-005",
     "lesson": "one-step",
     "form": "multiplication",
     "variableSide": "right",
-    "equation": "-45 = 9x",
+    "equation": "108 = 6p",
+    "variable": "p",
+    "solution": "18",
+    "steps": [
+      {
+        "equation": "18 = p",
+        "why": "Divide both sides by 6"
+      }
+    ]
+  },
+  {
+    "id": "os-006",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - 28 = -56",
+    "variable": "p",
+    "solution": "-28",
+    "steps": [
+      {
+        "equation": "p = -28",
+        "why": "Add 28 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-007",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-5 = n/(-7)",
+    "variable": "n",
+    "solution": "35",
+    "steps": [
+      {
+        "equation": "35 = n",
+        "why": "Multiply both sides by -7"
+      }
+    ]
+  },
+  {
+    "id": "os-008",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "b + (-4) = 18",
+    "variable": "b",
+    "solution": "22",
+    "steps": [
+      {
+        "equation": "b = 22",
+        "why": "Subtract -4 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-009",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-15 = x/2",
     "variable": "x",
-    "solution": "-5"
+    "solution": "-30",
+    "steps": [
+      {
+        "equation": "-30 = x",
+        "why": "Multiply both sides by 2"
+      }
+    ]
   },
   {
-    "id": "os-11",
+    "id": "os-010",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "15b = -60",
+    "variable": "b",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "b = -4",
+        "why": "Divide both sides by 15"
+      }
+    ]
+  },
+  {
+    "id": "os-011",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "9a = 207",
+    "variable": "a",
+    "solution": "23",
+    "steps": [
+      {
+        "equation": "a = 23",
+        "why": "Divide both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-012",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-11 = a + (-24)",
+    "variable": "a",
+    "solution": "13",
+    "steps": [
+      {
+        "equation": "13 = a",
+        "why": "Subtract -24 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-013",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-5 = k - 9",
+    "variable": "k",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "4 = k",
+        "why": "Add 9 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-014",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - 14 = 8",
+    "variable": "p",
+    "solution": "22",
+    "steps": [
+      {
+        "equation": "p = 22",
+        "why": "Add 14 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-015",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "3y = -42",
+    "variable": "y",
+    "solution": "-14",
+    "steps": [
+      {
+        "equation": "y = -14",
+        "why": "Divide both sides by 3"
+      }
+    ]
+  },
+  {
+    "id": "os-016",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "9 = x - (-18)",
+    "variable": "x",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "-9 = x",
+        "why": "Add -18 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-017",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "x - (-4) = 15",
+    "variable": "x",
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "x = 11",
+        "why": "Add -4 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-018",
     "lesson": "one-step",
     "form": "division",
     "variableSide": "left",
-    "equation": "y/6 = -3",
-    "variable": "y",
-    "solution": "-18"
+    "equation": "k/1 = -2",
+    "variable": "k",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "k = -2",
+        "why": "Multiply both sides by 1"
+      }
+    ]
   },
   {
-    "id": "os-12",
+    "id": "os-019",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-125 = (-5)b",
+    "variable": "b",
+    "solution": "25",
+    "steps": [
+      {
+        "equation": "25 = b",
+        "why": "Divide both sides by -5"
+      }
+    ]
+  },
+  {
+    "id": "os-020",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "z - (-28) = 13",
+    "variable": "z",
+    "solution": "-15",
+    "steps": [
+      {
+        "equation": "z = -15",
+        "why": "Add -28 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-021",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "15k = -15",
+    "variable": "k",
+    "solution": "-1",
+    "steps": [
+      {
+        "equation": "k = -1",
+        "why": "Divide both sides by 15"
+      }
+    ]
+  },
+  {
+    "id": "os-022",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/12 = 10",
+    "variable": "p",
+    "solution": "120",
+    "steps": [
+      {
+        "equation": "p = 120",
+        "why": "Multiply both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-023",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "12k = 300",
+    "variable": "k",
+    "solution": "25",
+    "steps": [
+      {
+        "equation": "k = 25",
+        "why": "Divide both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-024",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "2 = n - 15",
+    "variable": "n",
+    "solution": "17",
+    "steps": [
+      {
+        "equation": "17 = n",
+        "why": "Add 15 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-025",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "y - 27 = -45",
+    "variable": "y",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "y = -18",
+        "why": "Add 27 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-026",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "23 = 20 + z",
+    "variable": "z",
+    "solution": "3",
+    "steps": [
+      {
+        "equation": "3 = z",
+        "why": "Subtract 20 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-027",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "z + 30 = 5",
+    "variable": "z",
+    "solution": "-25",
+    "steps": [
+      {
+        "equation": "z = -25",
+        "why": "Subtract 30 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-028",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "40 = 4b",
+    "variable": "b",
+    "solution": "10",
+    "steps": [
+      {
+        "equation": "10 = b",
+        "why": "Divide both sides by 4"
+      }
+    ]
+  },
+  {
+    "id": "os-029",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-1 = 1m",
+    "variable": "m",
+    "solution": "-1",
+    "steps": [
+      {
+        "equation": "-1 = m",
+        "why": "Divide both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-030",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "17 = 19 + a",
+    "variable": "a",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "-2 = a",
+        "why": "Subtract 19 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-031",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-25 = (-6) + k",
+    "variable": "k",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "-19 = k",
+        "why": "Subtract -6 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-032",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "9x = 81",
+    "variable": "x",
+    "solution": "9",
+    "steps": [
+      {
+        "equation": "x = 9",
+        "why": "Divide both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-033",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-28 = (-16) + y",
+    "variable": "y",
+    "solution": "-12",
+    "steps": [
+      {
+        "equation": "-12 = y",
+        "why": "Subtract -16 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-034",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "k + 28 = 51",
+    "variable": "k",
+    "solution": "23",
+    "steps": [
+      {
+        "equation": "k = 23",
+        "why": "Subtract 28 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-035",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "4 = n + (-26)",
+    "variable": "n",
+    "solution": "30",
+    "steps": [
+      {
+        "equation": "30 = n",
+        "why": "Subtract -26 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-036",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-165 = 15y",
+    "variable": "y",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "-11 = y",
+        "why": "Divide both sides by 15"
+      }
+    ]
+  },
+  {
+    "id": "os-037",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-10 = m - 24",
+    "variable": "m",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "14 = m",
+        "why": "Add 24 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-038",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-29 = (-3) + b",
+    "variable": "b",
+    "solution": "-26",
+    "steps": [
+      {
+        "equation": "-26 = b",
+        "why": "Subtract -3 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-039",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "1a = 18",
+    "variable": "a",
+    "solution": "18",
+    "steps": [
+      {
+        "equation": "a = 18",
+        "why": "Divide both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-040",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "25 = (-1)y",
+    "variable": "y",
+    "solution": "-25",
+    "steps": [
+      {
+        "equation": "-25 = y",
+        "why": "Divide both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-041",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "198 = 11a",
+    "variable": "a",
+    "solution": "18",
+    "steps": [
+      {
+        "equation": "18 = a",
+        "why": "Divide both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-042",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "104 = (-8)x",
+    "variable": "x",
+    "solution": "-13",
+    "steps": [
+      {
+        "equation": "-13 = x",
+        "why": "Divide both sides by -8"
+      }
+    ]
+  },
+  {
+    "id": "os-043",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-22 = n - 21",
+    "variable": "n",
+    "solution": "-1",
+    "steps": [
+      {
+        "equation": "-1 = n",
+        "why": "Add 21 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-044",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "28 = k + 2",
+    "variable": "k",
+    "solution": "26",
+    "steps": [
+      {
+        "equation": "26 = k",
+        "why": "Subtract 2 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-045",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "285 = (-15)x",
+    "variable": "x",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "-19 = x",
+        "why": "Divide both sides by -15"
+      }
+    ]
+  },
+  {
+    "id": "os-046",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "11x = 165",
+    "variable": "x",
+    "solution": "15",
+    "steps": [
+      {
+        "equation": "x = 15",
+        "why": "Divide both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-047",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "2x = 50",
+    "variable": "x",
+    "solution": "25",
+    "steps": [
+      {
+        "equation": "x = 25",
+        "why": "Divide both sides by 2"
+      }
+    ]
+  },
+  {
+    "id": "os-048",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "n - (-18) = 48",
+    "variable": "n",
+    "solution": "30",
+    "steps": [
+      {
+        "equation": "n = 30",
+        "why": "Add -18 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-049",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-9)a = 180",
+    "variable": "a",
+    "solution": "-20",
+    "steps": [
+      {
+        "equation": "a = -20",
+        "why": "Divide both sides by -9"
+      }
+    ]
+  },
+  {
+    "id": "os-050",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "2 = p - (-8)",
+    "variable": "p",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "-6 = p",
+        "why": "Add -8 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-051",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "14 + p = -12",
+    "variable": "p",
+    "solution": "-26",
+    "steps": [
+      {
+        "equation": "p = -26",
+        "why": "Subtract 14 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-052",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "12a = -168",
+    "variable": "a",
+    "solution": "-14",
+    "steps": [
+      {
+        "equation": "a = -14",
+        "why": "Divide both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-053",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "n - 30 = -51",
+    "variable": "n",
+    "solution": "-21",
+    "steps": [
+      {
+        "equation": "n = -21",
+        "why": "Add 30 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-054",
     "lesson": "one-step",
     "form": "division",
     "variableSide": "right",
-    "equation": "5 = z/-2",
+    "equation": "-3 = m/4",
+    "variable": "m",
+    "solution": "-12",
+    "steps": [
+      {
+        "equation": "-12 = m",
+        "why": "Multiply both sides by 4"
+      }
+    ]
+  },
+  {
+    "id": "os-055",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-53 = m + (-24)",
+    "variable": "m",
+    "solution": "-29",
+    "steps": [
+      {
+        "equation": "-29 = m",
+        "why": "Subtract -24 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-056",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "b/(-3) = -14",
+    "variable": "b",
+    "solution": "42",
+    "steps": [
+      {
+        "equation": "b = 42",
+        "why": "Multiply both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-057",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "x - (-1) = -28",
+    "variable": "x",
+    "solution": "-29",
+    "steps": [
+      {
+        "equation": "x = -29",
+        "why": "Add -1 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-058",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-17 = k/(-3)",
+    "variable": "k",
+    "solution": "51",
+    "steps": [
+      {
+        "equation": "51 = k",
+        "why": "Multiply both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-059",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "k/(-3) = -3",
+    "variable": "k",
+    "solution": "9",
+    "steps": [
+      {
+        "equation": "k = 9",
+        "why": "Multiply both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-060",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "n - (-20) = 18",
+    "variable": "n",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "n = -2",
+        "why": "Add -20 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-061",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "8 = 8a",
+    "variable": "a",
+    "solution": "1",
+    "steps": [
+      {
+        "equation": "1 = a",
+        "why": "Divide both sides by 8"
+      }
+    ]
+  },
+  {
+    "id": "os-062",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-65 = (-13)n",
+    "variable": "n",
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "5 = n",
+        "why": "Divide both sides by -13"
+      }
+    ]
+  },
+  {
+    "id": "os-063",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "15 = 1 + k",
+    "variable": "k",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "14 = k",
+        "why": "Subtract 1 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-064",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "z - (-15) = 22",
     "variable": "z",
-    "solution": "-10"
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "z = 7",
+        "why": "Add -15 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-065",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-299 = 13p",
+    "variable": "p",
+    "solution": "-23",
+    "steps": [
+      {
+        "equation": "-23 = p",
+        "why": "Divide both sides by 13"
+      }
+    ]
+  },
+  {
+    "id": "os-066",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "b + (-24) = -46",
+    "variable": "b",
+    "solution": "-22",
+    "steps": [
+      {
+        "equation": "b = -22",
+        "why": "Subtract -24 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-067",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "y/6 = 17",
+    "variable": "y",
+    "solution": "102",
+    "steps": [
+      {
+        "equation": "y = 102",
+        "why": "Multiply both sides by 6"
+      }
+    ]
+  },
+  {
+    "id": "os-068",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "k + 23 = 15",
+    "variable": "k",
+    "solution": "-8",
+    "steps": [
+      {
+        "equation": "k = -8",
+        "why": "Subtract 23 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-069",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "m/9 = 15",
+    "variable": "m",
+    "solution": "135",
+    "steps": [
+      {
+        "equation": "m = 135",
+        "why": "Multiply both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-070",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-7)m = 154",
+    "variable": "m",
+    "solution": "-22",
+    "steps": [
+      {
+        "equation": "m = -22",
+        "why": "Divide both sides by -7"
+      }
+    ]
+  },
+  {
+    "id": "os-071",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "10 = x + (-19)",
+    "variable": "x",
+    "solution": "29",
+    "steps": [
+      {
+        "equation": "29 = x",
+        "why": "Subtract -19 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-072",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "32 = p - (-16)",
+    "variable": "p",
+    "solution": "16",
+    "steps": [
+      {
+        "equation": "16 = p",
+        "why": "Add -16 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-073",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "a + 24 = 29",
+    "variable": "a",
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "a = 5",
+        "why": "Subtract 24 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-074",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "21 = a - (-25)",
+    "variable": "a",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "-4 = a",
+        "why": "Add -25 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-075",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/11 = -3",
+    "variable": "n",
+    "solution": "-33",
+    "steps": [
+      {
+        "equation": "n = -33",
+        "why": "Multiply both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-076",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "a - 12 = -19",
+    "variable": "a",
+    "solution": "-7",
+    "steps": [
+      {
+        "equation": "a = -7",
+        "why": "Add 12 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-077",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-1 = z - 2",
+    "variable": "z",
+    "solution": "1",
+    "steps": [
+      {
+        "equation": "1 = z",
+        "why": "Add 2 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-078",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "m/11 = -5",
+    "variable": "m",
+    "solution": "-55",
+    "steps": [
+      {
+        "equation": "m = -55",
+        "why": "Multiply both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-079",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-14 = n - 28",
+    "variable": "n",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "14 = n",
+        "why": "Add 28 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-080",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-64 = 8a",
+    "variable": "a",
+    "solution": "-8",
+    "steps": [
+      {
+        "equation": "-8 = a",
+        "why": "Divide both sides by 8"
+      }
+    ]
+  },
+  {
+    "id": "os-081",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "k/1 = 11",
+    "variable": "k",
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "k = 11",
+        "why": "Multiply both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-082",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-126 = (-7)n",
+    "variable": "n",
+    "solution": "18",
+    "steps": [
+      {
+        "equation": "18 = n",
+        "why": "Divide both sides by -7"
+      }
+    ]
+  },
+  {
+    "id": "os-083",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-126 = 6b",
+    "variable": "b",
+    "solution": "-21",
+    "steps": [
+      {
+        "equation": "-21 = b",
+        "why": "Divide both sides by 6"
+      }
+    ]
+  },
+  {
+    "id": "os-084",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "4x = -16",
+    "variable": "x",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "x = -4",
+        "why": "Divide both sides by 4"
+      }
+    ]
+  },
+  {
+    "id": "os-085",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "k + (-4) = 0",
+    "variable": "k",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "k = 4",
+        "why": "Subtract -4 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-086",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "b + (-26) = -30",
+    "variable": "b",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "b = -4",
+        "why": "Subtract -26 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-087",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-11 = a + (-18)",
+    "variable": "a",
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "7 = a",
+        "why": "Subtract -18 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-088",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-32 = 8k",
+    "variable": "k",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "-4 = k",
+        "why": "Divide both sides by 8"
+      }
+    ]
+  },
+  {
+    "id": "os-089",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "(-13) + n = -9",
+    "variable": "n",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "n = 4",
+        "why": "Subtract -13 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-090",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "31 = x + 5",
+    "variable": "x",
+    "solution": "26",
+    "steps": [
+      {
+        "equation": "26 = x",
+        "why": "Subtract 5 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-091",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "z/9 = -10",
+    "variable": "z",
+    "solution": "-90",
+    "steps": [
+      {
+        "equation": "z = -90",
+        "why": "Multiply both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-092",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "y - (-14) = 0",
+    "variable": "y",
+    "solution": "-14",
+    "steps": [
+      {
+        "equation": "y = -14",
+        "why": "Add -14 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-093",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-15 = x/(-11)",
+    "variable": "x",
+    "solution": "165",
+    "steps": [
+      {
+        "equation": "165 = x",
+        "why": "Multiply both sides by -11"
+      }
+    ]
+  },
+  {
+    "id": "os-094",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-7)b = -28",
+    "variable": "b",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "b = 4",
+        "why": "Divide both sides by -7"
+      }
+    ]
+  },
+  {
+    "id": "os-095",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-25 = k - 16",
+    "variable": "k",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "-9 = k",
+        "why": "Add 16 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-096",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "b - (-4) = -25",
+    "variable": "b",
+    "solution": "-29",
+    "steps": [
+      {
+        "equation": "b = -29",
+        "why": "Add -4 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-097",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "12z = -228",
+    "variable": "z",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "z = -19",
+        "why": "Divide both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-098",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "15n = 255",
+    "variable": "n",
+    "solution": "17",
+    "steps": [
+      {
+        "equation": "n = 17",
+        "why": "Divide both sides by 15"
+      }
+    ]
+  },
+  {
+    "id": "os-099",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "(-26) + x = -44",
+    "variable": "x",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "x = -18",
+        "why": "Subtract -26 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-100",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "z + 9 = 22",
+    "variable": "z",
+    "solution": "13",
+    "steps": [
+      {
+        "equation": "z = 13",
+        "why": "Subtract 9 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-101",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "b/11 = -3",
+    "variable": "b",
+    "solution": "-33",
+    "steps": [
+      {
+        "equation": "b = -33",
+        "why": "Multiply both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-102",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-264 = 11m",
+    "variable": "m",
+    "solution": "-24",
+    "steps": [
+      {
+        "equation": "-24 = m",
+        "why": "Divide both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-103",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "10n = 170",
+    "variable": "n",
+    "solution": "17",
+    "steps": [
+      {
+        "equation": "n = 17",
+        "why": "Divide both sides by 10"
+      }
+    ]
+  },
+  {
+    "id": "os-104",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "k/(-11) = 14",
+    "variable": "k",
+    "solution": "-154",
+    "steps": [
+      {
+        "equation": "k = -154",
+        "why": "Multiply both sides by -11"
+      }
+    ]
+  },
+  {
+    "id": "os-105",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "a/9 = -3",
+    "variable": "a",
+    "solution": "-27",
+    "steps": [
+      {
+        "equation": "a = -27",
+        "why": "Multiply both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-106",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "(-19) + b = -38",
+    "variable": "b",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "b = -19",
+        "why": "Subtract -19 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-107",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-27 = 9z",
+    "variable": "z",
+    "solution": "-3",
+    "steps": [
+      {
+        "equation": "-3 = z",
+        "why": "Divide both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-108",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-19 = y/(-11)",
+    "variable": "y",
+    "solution": "209",
+    "steps": [
+      {
+        "equation": "209 = y",
+        "why": "Multiply both sides by -11"
+      }
+    ]
+  },
+  {
+    "id": "os-109",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-4)a = 76",
+    "variable": "a",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "a = -19",
+        "why": "Divide both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-110",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-20 = (-30) + m",
+    "variable": "m",
+    "solution": "10",
+    "steps": [
+      {
+        "equation": "10 = m",
+        "why": "Subtract -30 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-111",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "b - 23 = -48",
+    "variable": "b",
+    "solution": "-25",
+    "steps": [
+      {
+        "equation": "b = -25",
+        "why": "Add 23 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-112",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-8)b = 8",
+    "variable": "b",
+    "solution": "-1",
+    "steps": [
+      {
+        "equation": "b = -1",
+        "why": "Divide both sides by -8"
+      }
+    ]
+  },
+  {
+    "id": "os-113",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-125 = (-5)z",
+    "variable": "z",
+    "solution": "25",
+    "steps": [
+      {
+        "equation": "25 = z",
+        "why": "Divide both sides by -5"
+      }
+    ]
+  },
+  {
+    "id": "os-114",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "25 = p - (-23)",
+    "variable": "p",
+    "solution": "2",
+    "steps": [
+      {
+        "equation": "2 = p",
+        "why": "Add -23 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-115",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/(-9) = 1",
+    "variable": "p",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "p = -9",
+        "why": "Multiply both sides by -9"
+      }
+    ]
+  },
+  {
+    "id": "os-116",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-28 = x - 3",
+    "variable": "x",
+    "solution": "-25",
+    "steps": [
+      {
+        "equation": "-25 = x",
+        "why": "Add 3 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-117",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/2 = 13",
+    "variable": "n",
+    "solution": "26",
+    "steps": [
+      {
+        "equation": "n = 26",
+        "why": "Multiply both sides by 2"
+      }
+    ]
+  },
+  {
+    "id": "os-118",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "x + (-14) = -32",
+    "variable": "x",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "x = -18",
+        "why": "Subtract -14 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-119",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "48 = (-6)x",
+    "variable": "x",
+    "solution": "-8",
+    "steps": [
+      {
+        "equation": "-8 = x",
+        "why": "Divide both sides by -6"
+      }
+    ]
+  },
+  {
+    "id": "os-120",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-10)a = 100",
+    "variable": "a",
+    "solution": "-10",
+    "steps": [
+      {
+        "equation": "a = -10",
+        "why": "Divide both sides by -10"
+      }
+    ]
+  },
+  {
+    "id": "os-121",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-9 = a/(-6)",
+    "variable": "a",
+    "solution": "54",
+    "steps": [
+      {
+        "equation": "54 = a",
+        "why": "Multiply both sides by -6"
+      }
+    ]
+  },
+  {
+    "id": "os-122",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "n - 6 = -35",
+    "variable": "n",
+    "solution": "-29",
+    "steps": [
+      {
+        "equation": "n = -29",
+        "why": "Add 6 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-123",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-9 = y/(-6)",
+    "variable": "y",
+    "solution": "54",
+    "steps": [
+      {
+        "equation": "54 = y",
+        "why": "Multiply both sides by -6"
+      }
+    ]
+  },
+  {
+    "id": "os-124",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "6z = -66",
+    "variable": "z",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "z = -11",
+        "why": "Divide both sides by 6"
+      }
+    ]
+  },
+  {
+    "id": "os-125",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-14)k = -350",
+    "variable": "k",
+    "solution": "25",
+    "steps": [
+      {
+        "equation": "k = 25",
+        "why": "Divide both sides by -14"
+      }
+    ]
+  },
+  {
+    "id": "os-126",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "x - 22 = -50",
+    "variable": "x",
+    "solution": "-28",
+    "steps": [
+      {
+        "equation": "x = -28",
+        "why": "Add 22 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-127",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-22 = y - 14",
+    "variable": "y",
+    "solution": "-8",
+    "steps": [
+      {
+        "equation": "-8 = y",
+        "why": "Add 14 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-128",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "y - 21 = -10",
+    "variable": "y",
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "y = 11",
+        "why": "Add 21 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-129",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "y/2 = 15",
+    "variable": "y",
+    "solution": "30",
+    "steps": [
+      {
+        "equation": "y = 30",
+        "why": "Multiply both sides by 2"
+      }
+    ]
+  },
+  {
+    "id": "os-130",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/(-12) = -6",
+    "variable": "p",
+    "solution": "72",
+    "steps": [
+      {
+        "equation": "p = 72",
+        "why": "Multiply both sides by -12"
+      }
+    ]
+  },
+  {
+    "id": "os-131",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-4)z = -80",
+    "variable": "z",
+    "solution": "20",
+    "steps": [
+      {
+        "equation": "z = 20",
+        "why": "Divide both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-132",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "z + (-14) = 16",
+    "variable": "z",
+    "solution": "30",
+    "steps": [
+      {
+        "equation": "z = 30",
+        "why": "Subtract -14 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-133",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-7)m = -105",
+    "variable": "m",
+    "solution": "15",
+    "steps": [
+      {
+        "equation": "m = 15",
+        "why": "Divide both sides by -7"
+      }
+    ]
+  },
+  {
+    "id": "os-134",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - (-17) = -7",
+    "variable": "p",
+    "solution": "-24",
+    "steps": [
+      {
+        "equation": "p = -24",
+        "why": "Add -17 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-135",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-27 = y - 18",
+    "variable": "y",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "-9 = y",
+        "why": "Add 18 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-136",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-14 = (-19) + z",
+    "variable": "z",
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "5 = z",
+        "why": "Subtract -19 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-137",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "m + (-6) = -15",
+    "variable": "m",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "m = -9",
+        "why": "Subtract -6 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-138",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "x/(-1) = -11",
+    "variable": "x",
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "x = 11",
+        "why": "Multiply both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-139",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "p + (-23) = 7",
+    "variable": "p",
+    "solution": "30",
+    "steps": [
+      {
+        "equation": "p = 30",
+        "why": "Subtract -23 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-140",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-14)y = -210",
+    "variable": "y",
+    "solution": "15",
+    "steps": [
+      {
+        "equation": "y = 15",
+        "why": "Divide both sides by -14"
+      }
+    ]
+  },
+  {
+    "id": "os-141",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "15 = b/(-1)",
+    "variable": "b",
+    "solution": "-15",
+    "steps": [
+      {
+        "equation": "-15 = b",
+        "why": "Multiply both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-142",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "26 = z - (-19)",
+    "variable": "z",
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "7 = z",
+        "why": "Add -19 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-143",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "x - (-2) = -17",
+    "variable": "x",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "x = -19",
+        "why": "Add -2 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-144",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "(-4) + n = 11",
+    "variable": "n",
+    "solution": "15",
+    "steps": [
+      {
+        "equation": "n = 15",
+        "why": "Subtract -4 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-145",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "36 = 3m",
+    "variable": "m",
+    "solution": "12",
+    "steps": [
+      {
+        "equation": "12 = m",
+        "why": "Divide both sides by 3"
+      }
+    ]
+  },
+  {
+    "id": "os-146",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "15 = m/6",
+    "variable": "m",
+    "solution": "90",
+    "steps": [
+      {
+        "equation": "90 = m",
+        "why": "Multiply both sides by 6"
+      }
+    ]
+  },
+  {
+    "id": "os-147",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "a/2 = -19",
+    "variable": "a",
+    "solution": "-38",
+    "steps": [
+      {
+        "equation": "a = -38",
+        "why": "Multiply both sides by 2"
+      }
+    ]
+  },
+  {
+    "id": "os-148",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-21 = (-3)z",
+    "variable": "z",
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "7 = z",
+        "why": "Divide both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-149",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "y/(-3) = 2",
+    "variable": "y",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "y = -6",
+        "why": "Multiply both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-150",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-168 = 12p",
+    "variable": "p",
+    "solution": "-14",
+    "steps": [
+      {
+        "equation": "-14 = p",
+        "why": "Divide both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-151",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "8 + p = 16",
+    "variable": "p",
+    "solution": "8",
+    "steps": [
+      {
+        "equation": "p = 8",
+        "why": "Subtract 8 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-152",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "16 = (-9) + m",
+    "variable": "m",
+    "solution": "25",
+    "steps": [
+      {
+        "equation": "25 = m",
+        "why": "Subtract -9 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-153",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "255 = (-15)a",
+    "variable": "a",
+    "solution": "-17",
+    "steps": [
+      {
+        "equation": "-17 = a",
+        "why": "Divide both sides by -15"
+      }
+    ]
+  },
+  {
+    "id": "os-154",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "5m = 25",
+    "variable": "m",
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "m = 5",
+        "why": "Divide both sides by 5"
+      }
+    ]
+  },
+  {
+    "id": "os-155",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "34 = z - (-28)",
+    "variable": "z",
+    "solution": "6",
+    "steps": [
+      {
+        "equation": "6 = z",
+        "why": "Add -28 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-156",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-9 = y/(-4)",
+    "variable": "y",
+    "solution": "36",
+    "steps": [
+      {
+        "equation": "36 = y",
+        "why": "Multiply both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-157",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-90 = (-6)y",
+    "variable": "y",
+    "solution": "15",
+    "steps": [
+      {
+        "equation": "15 = y",
+        "why": "Divide both sides by -6"
+      }
+    ]
+  },
+  {
+    "id": "os-158",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "4 = p - (-9)",
+    "variable": "p",
+    "solution": "-5",
+    "steps": [
+      {
+        "equation": "-5 = p",
+        "why": "Add -9 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-159",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "b - (-15) = 6",
+    "variable": "b",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "b = -9",
+        "why": "Add -15 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-160",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-156 = 13p",
+    "variable": "p",
+    "solution": "-12",
+    "steps": [
+      {
+        "equation": "-12 = p",
+        "why": "Divide both sides by 13"
+      }
+    ]
+  },
+  {
+    "id": "os-161",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "12 = n + 2",
+    "variable": "n",
+    "solution": "10",
+    "steps": [
+      {
+        "equation": "10 = n",
+        "why": "Subtract 2 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-162",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "0 = (-15) + a",
+    "variable": "a",
+    "solution": "15",
+    "steps": [
+      {
+        "equation": "15 = a",
+        "why": "Subtract -15 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-163",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "z/5 = 2",
+    "variable": "z",
+    "solution": "10",
+    "steps": [
+      {
+        "equation": "z = 10",
+        "why": "Multiply both sides by 5"
+      }
+    ]
+  },
+  {
+    "id": "os-164",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "16 = x/(-2)",
+    "variable": "x",
+    "solution": "-32",
+    "steps": [
+      {
+        "equation": "-32 = x",
+        "why": "Multiply both sides by -2"
+      }
+    ]
+  },
+  {
+    "id": "os-165",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "9n = -81",
+    "variable": "n",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "n = -9",
+        "why": "Divide both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-166",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-25 = z - 16",
+    "variable": "z",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "-9 = z",
+        "why": "Add 16 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-167",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "17 = y/1",
+    "variable": "y",
+    "solution": "17",
+    "steps": [
+      {
+        "equation": "17 = y",
+        "why": "Multiply both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-168",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-120 = (-12)x",
+    "variable": "x",
+    "solution": "10",
+    "steps": [
+      {
+        "equation": "10 = x",
+        "why": "Divide both sides by -12"
+      }
+    ]
+  },
+  {
+    "id": "os-169",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "a/(-8) = 15",
+    "variable": "a",
+    "solution": "-120",
+    "steps": [
+      {
+        "equation": "a = -120",
+        "why": "Multiply both sides by -8"
+      }
+    ]
+  },
+  {
+    "id": "os-170",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "z - (-29) = 48",
+    "variable": "z",
+    "solution": "19",
+    "steps": [
+      {
+        "equation": "z = 19",
+        "why": "Add -29 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-171",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "2 = n - (-21)",
+    "variable": "n",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "-19 = n",
+        "why": "Add -21 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-172",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "9 = n/11",
+    "variable": "n",
+    "solution": "99",
+    "steps": [
+      {
+        "equation": "99 = n",
+        "why": "Multiply both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-173",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "y/10 = -9",
+    "variable": "y",
+    "solution": "-90",
+    "steps": [
+      {
+        "equation": "y = -90",
+        "why": "Multiply both sides by 10"
+      }
+    ]
+  },
+  {
+    "id": "os-174",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-2 = (-1)b",
+    "variable": "b",
+    "solution": "2",
+    "steps": [
+      {
+        "equation": "2 = b",
+        "why": "Divide both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-175",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "17 = m/(-8)",
+    "variable": "m",
+    "solution": "-136",
+    "steps": [
+      {
+        "equation": "-136 = m",
+        "why": "Multiply both sides by -8"
+      }
+    ]
+  },
+  {
+    "id": "os-176",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-12 = (-4)a",
+    "variable": "a",
+    "solution": "3",
+    "steps": [
+      {
+        "equation": "3 = a",
+        "why": "Divide both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-177",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "8 = b/7",
+    "variable": "b",
+    "solution": "56",
+    "steps": [
+      {
+        "equation": "56 = b",
+        "why": "Multiply both sides by 7"
+      }
+    ]
+  },
+  {
+    "id": "os-178",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-288 = 12z",
+    "variable": "z",
+    "solution": "-24",
+    "steps": [
+      {
+        "equation": "-24 = z",
+        "why": "Divide both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-179",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "9 + k = 36",
+    "variable": "k",
+    "solution": "27",
+    "steps": [
+      {
+        "equation": "k = 27",
+        "why": "Subtract 9 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-180",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-12 = m - (-13)",
+    "variable": "m",
+    "solution": "-25",
+    "steps": [
+      {
+        "equation": "-25 = m",
+        "why": "Add -13 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-181",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "p + (-19) = -29",
+    "variable": "p",
+    "solution": "-10",
+    "steps": [
+      {
+        "equation": "p = -10",
+        "why": "Subtract -19 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-182",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-14)p = 56",
+    "variable": "p",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "p = -4",
+        "why": "Divide both sides by -14"
+      }
+    ]
+  },
+  {
+    "id": "os-183",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "x - (-11) = -3",
+    "variable": "x",
+    "solution": "-14",
+    "steps": [
+      {
+        "equation": "x = -14",
+        "why": "Add -11 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-184",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "x/(-10) = -4",
+    "variable": "x",
+    "solution": "40",
+    "steps": [
+      {
+        "equation": "x = 40",
+        "why": "Multiply both sides by -10"
+      }
+    ]
+  },
+  {
+    "id": "os-185",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "y/(-8) = 11",
+    "variable": "y",
+    "solution": "-88",
+    "steps": [
+      {
+        "equation": "y = -88",
+        "why": "Multiply both sides by -8"
+      }
+    ]
+  },
+  {
+    "id": "os-186",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/5 = 14",
+    "variable": "n",
+    "solution": "70",
+    "steps": [
+      {
+        "equation": "n = 70",
+        "why": "Multiply both sides by 5"
+      }
+    ]
+  },
+  {
+    "id": "os-187",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "20 = b/4",
+    "variable": "b",
+    "solution": "80",
+    "steps": [
+      {
+        "equation": "80 = b",
+        "why": "Multiply both sides by 4"
+      }
+    ]
+  },
+  {
+    "id": "os-188",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-2 = z/(-8)",
+    "variable": "z",
+    "solution": "16",
+    "steps": [
+      {
+        "equation": "16 = z",
+        "why": "Multiply both sides by -8"
+      }
+    ]
+  },
+  {
+    "id": "os-189",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-13 = (-30) + x",
+    "variable": "x",
+    "solution": "17",
+    "steps": [
+      {
+        "equation": "17 = x",
+        "why": "Subtract -30 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-190",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "0 = 6 + p",
+    "variable": "p",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "-6 = p",
+        "why": "Subtract 6 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-191",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "x/12 = -1",
+    "variable": "x",
+    "solution": "-12",
+    "steps": [
+      {
+        "equation": "x = -12",
+        "why": "Multiply both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-192",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "11 + k = 38",
+    "variable": "k",
+    "solution": "27",
+    "steps": [
+      {
+        "equation": "k = 27",
+        "why": "Subtract 11 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-193",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-7 = n - (-14)",
+    "variable": "n",
+    "solution": "-21",
+    "steps": [
+      {
+        "equation": "-21 = n",
+        "why": "Add -14 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-194",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "k/(-11) = 13",
+    "variable": "k",
+    "solution": "-143",
+    "steps": [
+      {
+        "equation": "k = -143",
+        "why": "Multiply both sides by -11"
+      }
+    ]
+  },
+  {
+    "id": "os-195",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "(-23) + b = -53",
+    "variable": "b",
+    "solution": "-30",
+    "steps": [
+      {
+        "equation": "b = -30",
+        "why": "Subtract -23 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-196",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "12 + p = 10",
+    "variable": "p",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "p = -2",
+        "why": "Subtract 12 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-197",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-36 = z + (-30)",
+    "variable": "z",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "-6 = z",
+        "why": "Subtract -30 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-198",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "13x = -312",
+    "variable": "x",
+    "solution": "-24",
+    "steps": [
+      {
+        "equation": "x = -24",
+        "why": "Divide both sides by 13"
+      }
+    ]
+  },
+  {
+    "id": "os-199",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-7 = y - 14",
+    "variable": "y",
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "7 = y",
+        "why": "Add 14 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-200",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-14)m = 70",
+    "variable": "m",
+    "solution": "-5",
+    "steps": [
+      {
+        "equation": "m = -5",
+        "why": "Divide both sides by -14"
+      }
+    ]
+  },
+  {
+    "id": "os-201",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "y + (-25) = -24",
+    "variable": "y",
+    "solution": "1",
+    "steps": [
+      {
+        "equation": "y = 1",
+        "why": "Subtract -25 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-202",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-1)y = 7",
+    "variable": "y",
+    "solution": "-7",
+    "steps": [
+      {
+        "equation": "y = -7",
+        "why": "Divide both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-203",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "22 + x = 20",
+    "variable": "x",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "x = -2",
+        "why": "Subtract 22 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-204",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "5 = n/(-7)",
+    "variable": "n",
+    "solution": "-35",
+    "steps": [
+      {
+        "equation": "-35 = n",
+        "why": "Multiply both sides by -7"
+      }
+    ]
+  },
+  {
+    "id": "os-205",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "x - (-8) = 22",
+    "variable": "x",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "x = 14",
+        "why": "Add -8 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-206",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "b/(-8) = 16",
+    "variable": "b",
+    "solution": "-128",
+    "steps": [
+      {
+        "equation": "b = -128",
+        "why": "Multiply both sides by -8"
+      }
+    ]
+  },
+  {
+    "id": "os-207",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "78 = (-6)z",
+    "variable": "z",
+    "solution": "-13",
+    "steps": [
+      {
+        "equation": "-13 = z",
+        "why": "Divide both sides by -6"
+      }
+    ]
+  },
+  {
+    "id": "os-208",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "22 = n - (-17)",
+    "variable": "n",
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "5 = n",
+        "why": "Add -17 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-209",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "18 = z/1",
+    "variable": "z",
+    "solution": "18",
+    "steps": [
+      {
+        "equation": "18 = z",
+        "why": "Multiply both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-210",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-60 = (-3)p",
+    "variable": "p",
+    "solution": "20",
+    "steps": [
+      {
+        "equation": "20 = p",
+        "why": "Divide both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-211",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "11y = 44",
+    "variable": "y",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "y = 4",
+        "why": "Divide both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-212",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "y + (-24) = -35",
+    "variable": "y",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "y = -11",
+        "why": "Subtract -24 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-213",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-9 = z/5",
+    "variable": "z",
+    "solution": "-45",
+    "steps": [
+      {
+        "equation": "-45 = z",
+        "why": "Multiply both sides by 5"
+      }
+    ]
+  },
+  {
+    "id": "os-214",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "4 = (-25) + n",
+    "variable": "n",
+    "solution": "29",
+    "steps": [
+      {
+        "equation": "29 = n",
+        "why": "Subtract -25 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-215",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "28 + x = 54",
+    "variable": "x",
+    "solution": "26",
+    "steps": [
+      {
+        "equation": "x = 26",
+        "why": "Subtract 28 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-216",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "11 = n/3",
+    "variable": "n",
+    "solution": "33",
+    "steps": [
+      {
+        "equation": "33 = n",
+        "why": "Multiply both sides by 3"
+      }
+    ]
+  },
+  {
+    "id": "os-217",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "21 + p = 28",
+    "variable": "p",
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "p = 7",
+        "why": "Subtract 21 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-218",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "29 = a + 30",
+    "variable": "a",
+    "solution": "-1",
+    "steps": [
+      {
+        "equation": "-1 = a",
+        "why": "Subtract 30 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-219",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/5 = 9",
+    "variable": "n",
+    "solution": "45",
+    "steps": [
+      {
+        "equation": "n = 45",
+        "why": "Multiply both sides by 5"
+      }
+    ]
+  },
+  {
+    "id": "os-220",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "5 = (-1)n",
+    "variable": "n",
+    "solution": "-5",
+    "steps": [
+      {
+        "equation": "-5 = n",
+        "why": "Divide both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-221",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "a - (-11) = 8",
+    "variable": "a",
+    "solution": "-3",
+    "steps": [
+      {
+        "equation": "a = -3",
+        "why": "Add -11 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-222",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-14 = b - (-16)",
+    "variable": "b",
+    "solution": "-30",
+    "steps": [
+      {
+        "equation": "-30 = b",
+        "why": "Add -16 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-223",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/7 = 12",
+    "variable": "n",
+    "solution": "84",
+    "steps": [
+      {
+        "equation": "n = 84",
+        "why": "Multiply both sides by 7"
+      }
+    ]
+  },
+  {
+    "id": "os-224",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "b/(-1) = 10",
+    "variable": "b",
+    "solution": "-10",
+    "steps": [
+      {
+        "equation": "b = -10",
+        "why": "Multiply both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-225",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "65 = (-5)m",
+    "variable": "m",
+    "solution": "-13",
+    "steps": [
+      {
+        "equation": "-13 = m",
+        "why": "Divide both sides by -5"
+      }
+    ]
+  },
+  {
+    "id": "os-226",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-11 = a - 27",
+    "variable": "a",
+    "solution": "16",
+    "steps": [
+      {
+        "equation": "16 = a",
+        "why": "Add 27 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-227",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "z/(-4) = -4",
+    "variable": "z",
+    "solution": "16",
+    "steps": [
+      {
+        "equation": "z = 16",
+        "why": "Multiply both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-228",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/(-1) = -17",
+    "variable": "p",
+    "solution": "17",
+    "steps": [
+      {
+        "equation": "p = 17",
+        "why": "Multiply both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-229",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "y - (-19) = 11",
+    "variable": "y",
+    "solution": "-8",
+    "steps": [
+      {
+        "equation": "y = -8",
+        "why": "Add -19 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-230",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-13 = b + (-11)",
+    "variable": "b",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "-2 = b",
+        "why": "Subtract -11 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-231",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-9 = b/(-10)",
+    "variable": "b",
+    "solution": "90",
+    "steps": [
+      {
+        "equation": "90 = b",
+        "why": "Multiply both sides by -10"
+      }
+    ]
+  },
+  {
+    "id": "os-232",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-49 = y - 25",
+    "variable": "y",
+    "solution": "-24",
+    "steps": [
+      {
+        "equation": "-24 = y",
+        "why": "Add 25 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-233",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "z + (-25) = -31",
+    "variable": "z",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "z = -6",
+        "why": "Subtract -25 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-234",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-29 = (-14) + m",
+    "variable": "m",
+    "solution": "-15",
+    "steps": [
+      {
+        "equation": "-15 = m",
+        "why": "Subtract -14 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-235",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "20 = 5m",
+    "variable": "m",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "4 = m",
+        "why": "Divide both sides by 5"
+      }
+    ]
+  },
+  {
+    "id": "os-236",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "y + (-6) = 15",
+    "variable": "y",
+    "solution": "21",
+    "steps": [
+      {
+        "equation": "y = 21",
+        "why": "Subtract -6 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-237",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-37 = (-11) + k",
+    "variable": "k",
+    "solution": "-26",
+    "steps": [
+      {
+        "equation": "-26 = k",
+        "why": "Subtract -11 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-238",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "k - (-26) = -4",
+    "variable": "k",
+    "solution": "-30",
+    "steps": [
+      {
+        "equation": "k = -30",
+        "why": "Add -26 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-239",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - 9 = 4",
+    "variable": "p",
+    "solution": "13",
+    "steps": [
+      {
+        "equation": "p = 13",
+        "why": "Add 9 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-240",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "44 = (-11)n",
+    "variable": "n",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "-4 = n",
+        "why": "Divide both sides by -11"
+      }
+    ]
+  },
+  {
+    "id": "os-241",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "27 + n = 14",
+    "variable": "n",
+    "solution": "-13",
+    "steps": [
+      {
+        "equation": "n = -13",
+        "why": "Subtract 27 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-242",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-2 = n - 20",
+    "variable": "n",
+    "solution": "18",
+    "steps": [
+      {
+        "equation": "18 = n",
+        "why": "Add 20 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-243",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-10 = p/(-1)",
+    "variable": "p",
+    "solution": "10",
+    "steps": [
+      {
+        "equation": "10 = p",
+        "why": "Multiply both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-244",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "b + 17 = 12",
+    "variable": "b",
+    "solution": "-5",
+    "steps": [
+      {
+        "equation": "b = -5",
+        "why": "Subtract 17 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-245",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "55 = 5p",
+    "variable": "p",
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "11 = p",
+        "why": "Divide both sides by 5"
+      }
+    ]
+  },
+  {
+    "id": "os-246",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "6 = y - (-15)",
+    "variable": "y",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "-9 = y",
+        "why": "Add -15 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-247",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-77 = 7m",
+    "variable": "m",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "-11 = m",
+        "why": "Divide both sides by 7"
+      }
+    ]
+  },
+  {
+    "id": "os-248",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "26 + b = 8",
+    "variable": "b",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "b = -18",
+        "why": "Subtract 26 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-249",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-4 = m/4",
+    "variable": "m",
+    "solution": "-16",
+    "steps": [
+      {
+        "equation": "-16 = m",
+        "why": "Multiply both sides by 4"
+      }
+    ]
+  },
+  {
+    "id": "os-250",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-16 = y/5",
+    "variable": "y",
+    "solution": "-80",
+    "steps": [
+      {
+        "equation": "-80 = y",
+        "why": "Multiply both sides by 5"
+      }
+    ]
+  },
+  {
+    "id": "os-251",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-51 = a - 23",
+    "variable": "a",
+    "solution": "-28",
+    "steps": [
+      {
+        "equation": "-28 = a",
+        "why": "Add 23 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-252",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - (-14) = -3",
+    "variable": "p",
+    "solution": "-17",
+    "steps": [
+      {
+        "equation": "p = -17",
+        "why": "Add -14 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-253",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-9 = k/12",
+    "variable": "k",
+    "solution": "-108",
+    "steps": [
+      {
+        "equation": "-108 = k",
+        "why": "Multiply both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-254",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-25 = (-5)x",
+    "variable": "x",
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "5 = x",
+        "why": "Divide both sides by -5"
+      }
+    ]
+  },
+  {
+    "id": "os-255",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-24 = z - 2",
+    "variable": "z",
+    "solution": "-22",
+    "steps": [
+      {
+        "equation": "-22 = z",
+        "why": "Add 2 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-256",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "29 = 24 + x",
+    "variable": "x",
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "5 = x",
+        "why": "Subtract 24 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-257",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "n - (-16) = 0",
+    "variable": "n",
+    "solution": "-16",
+    "steps": [
+      {
+        "equation": "n = -16",
+        "why": "Add -16 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-258",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-8 = (-25) + y",
+    "variable": "y",
+    "solution": "17",
+    "steps": [
+      {
+        "equation": "17 = y",
+        "why": "Subtract -25 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-259",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "20 = m/2",
+    "variable": "m",
+    "solution": "40",
+    "steps": [
+      {
+        "equation": "40 = m",
+        "why": "Multiply both sides by 2"
+      }
+    ]
+  },
+  {
+    "id": "os-260",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "9 = x/(-9)",
+    "variable": "x",
+    "solution": "-81",
+    "steps": [
+      {
+        "equation": "-81 = x",
+        "why": "Multiply both sides by -9"
+      }
+    ]
+  },
+  {
+    "id": "os-261",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "6 + m = 36",
+    "variable": "m",
+    "solution": "30",
+    "steps": [
+      {
+        "equation": "m = 30",
+        "why": "Subtract 6 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-262",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "56 = 14x",
+    "variable": "x",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "4 = x",
+        "why": "Divide both sides by 14"
+      }
+    ]
+  },
+  {
+    "id": "os-263",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "55 = 11n",
+    "variable": "n",
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "5 = n",
+        "why": "Divide both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-264",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-13 = (-1)y",
+    "variable": "y",
+    "solution": "13",
+    "steps": [
+      {
+        "equation": "13 = y",
+        "why": "Divide both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-265",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - 21 = -51",
+    "variable": "p",
+    "solution": "-30",
+    "steps": [
+      {
+        "equation": "p = -30",
+        "why": "Add 21 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-266",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "a/(-4) = 7",
+    "variable": "a",
+    "solution": "-28",
+    "steps": [
+      {
+        "equation": "a = -28",
+        "why": "Multiply both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-267",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "18 + a = 40",
+    "variable": "a",
+    "solution": "22",
+    "steps": [
+      {
+        "equation": "a = 22",
+        "why": "Subtract 18 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-268",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "5k = 105",
+    "variable": "k",
+    "solution": "21",
+    "steps": [
+      {
+        "equation": "k = 21",
+        "why": "Divide both sides by 5"
+      }
+    ]
+  },
+  {
+    "id": "os-269",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "27 = k + 1",
+    "variable": "k",
+    "solution": "26",
+    "steps": [
+      {
+        "equation": "26 = k",
+        "why": "Subtract 1 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-270",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "11 = a + 30",
+    "variable": "a",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "-19 = a",
+        "why": "Subtract 30 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-271",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "k - (-4) = -17",
+    "variable": "k",
+    "solution": "-21",
+    "steps": [
+      {
+        "equation": "k = -21",
+        "why": "Add -4 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-272",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-52 = p + (-29)",
+    "variable": "p",
+    "solution": "-23",
+    "steps": [
+      {
+        "equation": "-23 = p",
+        "why": "Subtract -29 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-273",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-9 = (-3)a",
+    "variable": "a",
+    "solution": "3",
+    "steps": [
+      {
+        "equation": "3 = a",
+        "why": "Divide both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-274",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "m - (-13) = 11",
+    "variable": "m",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "m = -2",
+        "why": "Add -13 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-275",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/(-9) = 4",
+    "variable": "p",
+    "solution": "-36",
+    "steps": [
+      {
+        "equation": "p = -36",
+        "why": "Multiply both sides by -9"
+      }
+    ]
+  },
+  {
+    "id": "os-276",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-24 = (-13) + x",
+    "variable": "x",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "-11 = x",
+        "why": "Subtract -13 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-277",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "n - 25 = -2",
+    "variable": "n",
+    "solution": "23",
+    "steps": [
+      {
+        "equation": "n = 23",
+        "why": "Add 25 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-278",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "y - 9 = -31",
+    "variable": "y",
+    "solution": "-22",
+    "steps": [
+      {
+        "equation": "y = -22",
+        "why": "Add 9 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-279",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "b - (-4) = 19",
+    "variable": "b",
+    "solution": "15",
+    "steps": [
+      {
+        "equation": "b = 15",
+        "why": "Add -4 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-280",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "19 + k = 49",
+    "variable": "k",
+    "solution": "30",
+    "steps": [
+      {
+        "equation": "k = 30",
+        "why": "Subtract 19 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-281",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-72 = 8n",
+    "variable": "n",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "-9 = n",
+        "why": "Divide both sides by 8"
+      }
+    ]
+  },
+  {
+    "id": "os-282",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "30 + y = 12",
+    "variable": "y",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "y = -18",
+        "why": "Subtract 30 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-283",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "k/6 = -8",
+    "variable": "k",
+    "solution": "-48",
+    "steps": [
+      {
+        "equation": "k = -48",
+        "why": "Multiply both sides by 6"
+      }
+    ]
+  },
+  {
+    "id": "os-284",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "9 = y/12",
+    "variable": "y",
+    "solution": "108",
+    "steps": [
+      {
+        "equation": "108 = y",
+        "why": "Multiply both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-285",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "21 + z = 15",
+    "variable": "z",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "z = -6",
+        "why": "Subtract 21 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-286",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - 22 = -5",
+    "variable": "p",
+    "solution": "17",
+    "steps": [
+      {
+        "equation": "p = 17",
+        "why": "Add 22 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-287",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "24 = 6z",
+    "variable": "z",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "4 = z",
+        "why": "Divide both sides by 6"
+      }
+    ]
+  },
+  {
+    "id": "os-288",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - (-23) = 30",
+    "variable": "p",
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "p = 7",
+        "why": "Add -23 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-289",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "n + 20 = 28",
+    "variable": "n",
+    "solution": "8",
+    "steps": [
+      {
+        "equation": "n = 8",
+        "why": "Subtract 20 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-290",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "n - 15 = -33",
+    "variable": "n",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "n = -18",
+        "why": "Add 15 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-291",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "15 = k/(-1)",
+    "variable": "k",
+    "solution": "-15",
+    "steps": [
+      {
+        "equation": "-15 = k",
+        "why": "Multiply both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-292",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "4 = a + (-24)",
+    "variable": "a",
+    "solution": "28",
+    "steps": [
+      {
+        "equation": "28 = a",
+        "why": "Subtract -24 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-293",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-12)k = -300",
+    "variable": "k",
+    "solution": "25",
+    "steps": [
+      {
+        "equation": "k = 25",
+        "why": "Divide both sides by -12"
+      }
+    ]
+  },
+  {
+    "id": "os-294",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "z/(-4) = 8",
+    "variable": "z",
+    "solution": "-32",
+    "steps": [
+      {
+        "equation": "z = -32",
+        "why": "Multiply both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-295",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/3 = -8",
+    "variable": "n",
+    "solution": "-24",
+    "steps": [
+      {
+        "equation": "n = -24",
+        "why": "Multiply both sides by 3"
+      }
+    ]
+  },
+  {
+    "id": "os-296",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-13)y = 208",
+    "variable": "y",
+    "solution": "-16",
+    "steps": [
+      {
+        "equation": "y = -16",
+        "why": "Divide both sides by -13"
+      }
+    ]
+  },
+  {
+    "id": "os-297",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "4 = m - (-17)",
+    "variable": "m",
+    "solution": "-13",
+    "steps": [
+      {
+        "equation": "-13 = m",
+        "why": "Add -17 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-298",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "33 = p - (-26)",
+    "variable": "p",
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "7 = p",
+        "why": "Add -26 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-299",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-6)p = -84",
+    "variable": "p",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "p = 14",
+        "why": "Divide both sides by -6"
+      }
+    ]
+  },
+  {
+    "id": "os-300",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-10 = b - 24",
+    "variable": "b",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "14 = b",
+        "why": "Add 24 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-301",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "m - 23 = -41",
+    "variable": "m",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "m = -18",
+        "why": "Add 23 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-302",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "208 = 13p",
+    "variable": "p",
+    "solution": "16",
+    "steps": [
+      {
+        "equation": "16 = p",
+        "why": "Divide both sides by 13"
+      }
+    ]
+  },
+  {
+    "id": "os-303",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "14 = k/(-10)",
+    "variable": "k",
+    "solution": "-140",
+    "steps": [
+      {
+        "equation": "-140 = k",
+        "why": "Multiply both sides by -10"
+      }
+    ]
+  },
+  {
+    "id": "os-304",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "14 + m = 6",
+    "variable": "m",
+    "solution": "-8",
+    "steps": [
+      {
+        "equation": "m = -8",
+        "why": "Subtract 14 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-305",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "y - (-28) = -1",
+    "variable": "y",
+    "solution": "-29",
+    "steps": [
+      {
+        "equation": "y = -29",
+        "why": "Add -28 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-306",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-15)y = 90",
+    "variable": "y",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "y = -6",
+        "why": "Divide both sides by -15"
+      }
+    ]
+  },
+  {
+    "id": "os-307",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-28 = z + (-9)",
+    "variable": "z",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "-19 = z",
+        "why": "Subtract -9 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-308",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-1 = b - 29",
+    "variable": "b",
+    "solution": "28",
+    "steps": [
+      {
+        "equation": "28 = b",
+        "why": "Add 29 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-309",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "b - (-25) = 43",
+    "variable": "b",
+    "solution": "18",
+    "steps": [
+      {
+        "equation": "b = 18",
+        "why": "Add -25 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-310",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "43 = z + 19",
+    "variable": "z",
+    "solution": "24",
+    "steps": [
+      {
+        "equation": "24 = z",
+        "why": "Subtract 19 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-311",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "a + (-4) = 3",
+    "variable": "a",
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "a = 7",
+        "why": "Subtract -4 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-312",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "a + 4 = 3",
+    "variable": "a",
+    "solution": "-1",
+    "steps": [
+      {
+        "equation": "a = -1",
+        "why": "Subtract 4 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-313",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-11 = z - 25",
+    "variable": "z",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "14 = z",
+        "why": "Add 25 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-314",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "m - 6 = -25",
+    "variable": "m",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "m = -19",
+        "why": "Add 6 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-315",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "(-23) + k = -5",
+    "variable": "k",
+    "solution": "18",
+    "steps": [
+      {
+        "equation": "k = 18",
+        "why": "Subtract -23 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-316",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "z + (-21) = 9",
+    "variable": "z",
+    "solution": "30",
+    "steps": [
+      {
+        "equation": "z = 30",
+        "why": "Subtract -21 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-317",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-3)x = 69",
+    "variable": "x",
+    "solution": "-23",
+    "steps": [
+      {
+        "equation": "x = -23",
+        "why": "Divide both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-318",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "z/9 = -11",
+    "variable": "z",
+    "solution": "-99",
+    "steps": [
+      {
+        "equation": "z = -99",
+        "why": "Multiply both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-319",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "60 = (-6)x",
+    "variable": "x",
+    "solution": "-10",
+    "steps": [
+      {
+        "equation": "-10 = x",
+        "why": "Divide both sides by -6"
+      }
+    ]
+  },
+  {
+    "id": "os-320",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "153 = (-9)z",
+    "variable": "z",
+    "solution": "-17",
+    "steps": [
+      {
+        "equation": "-17 = z",
+        "why": "Divide both sides by -9"
+      }
+    ]
+  },
+  {
+    "id": "os-321",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "1 = y - 10",
+    "variable": "y",
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "11 = y",
+        "why": "Add 10 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-322",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "200 = (-10)m",
+    "variable": "m",
+    "solution": "-20",
+    "steps": [
+      {
+        "equation": "-20 = m",
+        "why": "Divide both sides by -10"
+      }
+    ]
+  },
+  {
+    "id": "os-323",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - (-14) = 32",
+    "variable": "p",
+    "solution": "18",
+    "steps": [
+      {
+        "equation": "p = 18",
+        "why": "Add -14 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-324",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "13 = b + 3",
+    "variable": "b",
+    "solution": "10",
+    "steps": [
+      {
+        "equation": "10 = b",
+        "why": "Subtract 3 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-325",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-38 = b - 11",
+    "variable": "b",
+    "solution": "-27",
+    "steps": [
+      {
+        "equation": "-27 = b",
+        "why": "Add 11 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-326",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "n + 14 = 12",
+    "variable": "n",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "n = -2",
+        "why": "Subtract 14 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-327",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "a + 9 = 5",
+    "variable": "a",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "a = -4",
+        "why": "Subtract 9 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-328",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-36 = p - 25",
+    "variable": "p",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "-11 = p",
+        "why": "Add 25 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-329",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "k/8 = -4",
+    "variable": "k",
+    "solution": "-32",
+    "steps": [
+      {
+        "equation": "k = -32",
+        "why": "Multiply both sides by 8"
+      }
+    ]
+  },
+  {
+    "id": "os-330",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-72 = 12y",
+    "variable": "y",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "-6 = y",
+        "why": "Divide both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-331",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "b - 24 = -10",
+    "variable": "b",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "b = 14",
+        "why": "Add 24 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-332",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "k/7 = 3",
+    "variable": "k",
+    "solution": "21",
+    "steps": [
+      {
+        "equation": "k = 21",
+        "why": "Multiply both sides by 7"
+      }
+    ]
+  },
+  {
+    "id": "os-333",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-216 = 9a",
+    "variable": "a",
+    "solution": "-24",
+    "steps": [
+      {
+        "equation": "-24 = a",
+        "why": "Divide both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-334",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "m/(-12) = -1",
+    "variable": "m",
+    "solution": "12",
+    "steps": [
+      {
+        "equation": "m = 12",
+        "why": "Multiply both sides by -12"
+      }
+    ]
+  },
+  {
+    "id": "os-335",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "m/(-3) = -10",
+    "variable": "m",
+    "solution": "30",
+    "steps": [
+      {
+        "equation": "m = 30",
+        "why": "Multiply both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-336",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-15)k = -315",
+    "variable": "k",
+    "solution": "21",
+    "steps": [
+      {
+        "equation": "k = 21",
+        "why": "Divide both sides by -15"
+      }
+    ]
+  },
+  {
+    "id": "os-337",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/(-10) = -11",
+    "variable": "p",
+    "solution": "110",
+    "steps": [
+      {
+        "equation": "p = 110",
+        "why": "Multiply both sides by -10"
+      }
+    ]
+  },
+  {
+    "id": "os-338",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "(-3) + b = 6",
+    "variable": "b",
+    "solution": "9",
+    "steps": [
+      {
+        "equation": "b = 9",
+        "why": "Subtract -3 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-339",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "15 = a/9",
+    "variable": "a",
+    "solution": "135",
+    "steps": [
+      {
+        "equation": "135 = a",
+        "why": "Multiply both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-340",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "15a = 75",
+    "variable": "a",
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "a = 5",
+        "why": "Divide both sides by 15"
+      }
+    ]
+  },
+  {
+    "id": "os-341",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-6 = n/(-1)",
+    "variable": "n",
+    "solution": "6",
+    "steps": [
+      {
+        "equation": "6 = n",
+        "why": "Multiply both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-342",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "18 = p - 5",
+    "variable": "p",
+    "solution": "23",
+    "steps": [
+      {
+        "equation": "23 = p",
+        "why": "Add 5 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-343",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "168 = 12a",
+    "variable": "a",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "14 = a",
+        "why": "Divide both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-344",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "36 = x - (-8)",
+    "variable": "x",
+    "solution": "28",
+    "steps": [
+      {
+        "equation": "28 = x",
+        "why": "Add -8 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-345",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-6)y = 72",
+    "variable": "y",
+    "solution": "-12",
+    "steps": [
+      {
+        "equation": "y = -12",
+        "why": "Divide both sides by -6"
+      }
+    ]
+  },
+  {
+    "id": "os-346",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-11 = p/(-7)",
+    "variable": "p",
+    "solution": "77",
+    "steps": [
+      {
+        "equation": "77 = p",
+        "why": "Multiply both sides by -7"
+      }
+    ]
+  },
+  {
+    "id": "os-347",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "z + 11 = -5",
+    "variable": "z",
+    "solution": "-16",
+    "steps": [
+      {
+        "equation": "z = -16",
+        "why": "Subtract 11 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-348",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "19 + n = 8",
+    "variable": "n",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "n = -11",
+        "why": "Subtract 19 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-349",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/8 = -16",
+    "variable": "p",
+    "solution": "-128",
+    "steps": [
+      {
+        "equation": "p = -128",
+        "why": "Multiply both sides by 8"
+      }
+    ]
+  },
+  {
+    "id": "os-350",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "4 = 1b",
+    "variable": "b",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "4 = b",
+        "why": "Divide both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-351",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "m - (-19) = 32",
+    "variable": "m",
+    "solution": "13",
+    "steps": [
+      {
+        "equation": "m = 13",
+        "why": "Add -19 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-352",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "9 = 8 + y",
+    "variable": "y",
+    "solution": "1",
+    "steps": [
+      {
+        "equation": "1 = y",
+        "why": "Subtract 8 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-353",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "9 = m/8",
+    "variable": "m",
+    "solution": "72",
+    "steps": [
+      {
+        "equation": "72 = m",
+        "why": "Multiply both sides by 8"
+      }
+    ]
+  },
+  {
+    "id": "os-354",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "z - 21 = -4",
+    "variable": "z",
+    "solution": "17",
+    "steps": [
+      {
+        "equation": "z = 17",
+        "why": "Add 21 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-355",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "9 = (-7) + a",
+    "variable": "a",
+    "solution": "16",
+    "steps": [
+      {
+        "equation": "16 = a",
+        "why": "Subtract -7 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-356",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/(-5) = -19",
+    "variable": "p",
+    "solution": "95",
+    "steps": [
+      {
+        "equation": "p = 95",
+        "why": "Multiply both sides by -5"
+      }
+    ]
+  },
+  {
+    "id": "os-357",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "z + 17 = 31",
+    "variable": "z",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "z = 14",
+        "why": "Subtract 17 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-358",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-14 = m/1",
+    "variable": "m",
+    "solution": "-14",
+    "steps": [
+      {
+        "equation": "-14 = m",
+        "why": "Multiply both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-359",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-12 = k/(-3)",
+    "variable": "k",
+    "solution": "36",
+    "steps": [
+      {
+        "equation": "36 = k",
+        "why": "Multiply both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-360",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "a - (-23) = 29",
+    "variable": "a",
+    "solution": "6",
+    "steps": [
+      {
+        "equation": "a = 6",
+        "why": "Add -23 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-361",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "1 + x = 7",
+    "variable": "x",
+    "solution": "6",
+    "steps": [
+      {
+        "equation": "x = 6",
+        "why": "Subtract 1 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-362",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-12 = b/(-1)",
+    "variable": "b",
+    "solution": "12",
+    "steps": [
+      {
+        "equation": "12 = b",
+        "why": "Multiply both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-363",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "32 = m + 7",
+    "variable": "m",
+    "solution": "25",
+    "steps": [
+      {
+        "equation": "25 = m",
+        "why": "Subtract 7 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-364",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-19 = m - 16",
+    "variable": "m",
+    "solution": "-3",
+    "steps": [
+      {
+        "equation": "-3 = m",
+        "why": "Add 16 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-365",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "11 = a/(-2)",
+    "variable": "a",
+    "solution": "-22",
+    "steps": [
+      {
+        "equation": "-22 = a",
+        "why": "Multiply both sides by -2"
+      }
+    ]
+  },
+  {
+    "id": "os-366",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "m/4 = 9",
+    "variable": "m",
+    "solution": "36",
+    "steps": [
+      {
+        "equation": "m = 36",
+        "why": "Multiply both sides by 4"
+      }
+    ]
+  },
+  {
+    "id": "os-367",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "k - 10 = -28",
+    "variable": "k",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "k = -18",
+        "why": "Add 10 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-368",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-14 = 1m",
+    "variable": "m",
+    "solution": "-14",
+    "steps": [
+      {
+        "equation": "-14 = m",
+        "why": "Divide both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-369",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "a + 4 = -1",
+    "variable": "a",
+    "solution": "-5",
+    "steps": [
+      {
+        "equation": "a = -5",
+        "why": "Subtract 4 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-370",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "n - (-19) = 32",
+    "variable": "n",
+    "solution": "13",
+    "steps": [
+      {
+        "equation": "n = 13",
+        "why": "Add -19 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-371",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "17 = n - (-7)",
+    "variable": "n",
+    "solution": "10",
+    "steps": [
+      {
+        "equation": "10 = n",
+        "why": "Add -7 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-372",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "3 + p = -26",
+    "variable": "p",
+    "solution": "-29",
+    "steps": [
+      {
+        "equation": "p = -29",
+        "why": "Subtract 3 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-373",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-3)y = 33",
+    "variable": "y",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "y = -11",
+        "why": "Divide both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-374",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-21 = b - (-9)",
+    "variable": "b",
+    "solution": "-30",
+    "steps": [
+      {
+        "equation": "-30 = b",
+        "why": "Add -9 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-375",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-126 = (-14)p",
+    "variable": "p",
+    "solution": "9",
+    "steps": [
+      {
+        "equation": "9 = p",
+        "why": "Divide both sides by -14"
+      }
+    ]
+  },
+  {
+    "id": "os-376",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-44 = (-11)p",
+    "variable": "p",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "4 = p",
+        "why": "Divide both sides by -11"
+      }
+    ]
+  },
+  {
+    "id": "os-377",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "165 = 15m",
+    "variable": "m",
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "11 = m",
+        "why": "Divide both sides by 15"
+      }
+    ]
+  },
+  {
+    "id": "os-378",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "18 = b/6",
+    "variable": "b",
+    "solution": "108",
+    "steps": [
+      {
+        "equation": "108 = b",
+        "why": "Multiply both sides by 6"
+      }
+    ]
+  },
+  {
+    "id": "os-379",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "z + (-23) = -2",
+    "variable": "z",
+    "solution": "21",
+    "steps": [
+      {
+        "equation": "z = 21",
+        "why": "Subtract -23 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-380",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-3 = 6 + a",
+    "variable": "a",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "-9 = a",
+        "why": "Subtract 6 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-381",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "42 = (-7)a",
+    "variable": "a",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "-6 = a",
+        "why": "Divide both sides by -7"
+      }
+    ]
+  },
+  {
+    "id": "os-382",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "m/1 = -4",
+    "variable": "m",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "m = -4",
+        "why": "Multiply both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-383",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/7 = -6",
+    "variable": "n",
+    "solution": "-42",
+    "steps": [
+      {
+        "equation": "n = -42",
+        "why": "Multiply both sides by 7"
+      }
+    ]
+  },
+  {
+    "id": "os-384",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "(-27) + a = 3",
+    "variable": "a",
+    "solution": "30",
+    "steps": [
+      {
+        "equation": "a = 30",
+        "why": "Subtract -27 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-385",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-12 = y/(-3)",
+    "variable": "y",
+    "solution": "36",
+    "steps": [
+      {
+        "equation": "36 = y",
+        "why": "Multiply both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-386",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-1 = m + 28",
+    "variable": "m",
+    "solution": "-29",
+    "steps": [
+      {
+        "equation": "-29 = m",
+        "why": "Subtract 28 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-387",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-11 = (-2) + z",
+    "variable": "z",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "-9 = z",
+        "why": "Subtract -2 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-388",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "13k = 13",
+    "variable": "k",
+    "solution": "1",
+    "steps": [
+      {
+        "equation": "k = 1",
+        "why": "Divide both sides by 13"
+      }
+    ]
+  },
+  {
+    "id": "os-389",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "y/(-2) = -9",
+    "variable": "y",
+    "solution": "18",
+    "steps": [
+      {
+        "equation": "y = 18",
+        "why": "Multiply both sides by -2"
+      }
+    ]
+  },
+  {
+    "id": "os-390",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "(-21) + n = -39",
+    "variable": "n",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "n = -18",
+        "why": "Subtract -21 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-391",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/11 = 1",
+    "variable": "n",
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "n = 11",
+        "why": "Multiply both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-392",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "18 = b/12",
+    "variable": "b",
+    "solution": "216",
+    "steps": [
+      {
+        "equation": "216 = b",
+        "why": "Multiply both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-393",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-1)m = 7",
+    "variable": "m",
+    "solution": "-7",
+    "steps": [
+      {
+        "equation": "m = -7",
+        "why": "Divide both sides by -1"
+      }
+    ]
+  },
+  {
+    "id": "os-394",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "a/3 = -5",
+    "variable": "a",
+    "solution": "-15",
+    "steps": [
+      {
+        "equation": "a = -15",
+        "why": "Multiply both sides by 3"
+      }
+    ]
+  },
+  {
+    "id": "os-395",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-18 = y + (-7)",
+    "variable": "y",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "-11 = y",
+        "why": "Subtract -7 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-396",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "60 = 10z",
+    "variable": "z",
+    "solution": "6",
+    "steps": [
+      {
+        "equation": "6 = z",
+        "why": "Divide both sides by 10"
+      }
+    ]
+  },
+  {
+    "id": "os-397",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "14 = 1p",
+    "variable": "p",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "14 = p",
+        "why": "Divide both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-398",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "x/(-4) = 17",
+    "variable": "x",
+    "solution": "-68",
+    "steps": [
+      {
+        "equation": "x = -68",
+        "why": "Multiply both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-399",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "11p = 220",
+    "variable": "p",
+    "solution": "20",
+    "steps": [
+      {
+        "equation": "p = 20",
+        "why": "Divide both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-400",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "(-18) + m = -48",
+    "variable": "m",
+    "solution": "-30",
+    "steps": [
+      {
+        "equation": "m = -30",
+        "why": "Subtract -18 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-401",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-7 = b/(-3)",
+    "variable": "b",
+    "solution": "21",
+    "steps": [
+      {
+        "equation": "21 = b",
+        "why": "Multiply both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-402",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "31 = x - (-25)",
+    "variable": "x",
+    "solution": "6",
+    "steps": [
+      {
+        "equation": "6 = x",
+        "why": "Add -25 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-403",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "z - 10 = 6",
+    "variable": "z",
+    "solution": "16",
+    "steps": [
+      {
+        "equation": "z = 16",
+        "why": "Add 10 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-404",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "22 + n = 36",
+    "variable": "n",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "n = 14",
+        "why": "Subtract 22 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-405",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "a - 1 = 1",
+    "variable": "a",
+    "solution": "2",
+    "steps": [
+      {
+        "equation": "a = 2",
+        "why": "Add 1 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-406",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "0 = z + (-12)",
+    "variable": "z",
+    "solution": "12",
+    "steps": [
+      {
+        "equation": "12 = z",
+        "why": "Subtract -12 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-407",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "n - 19 = -35",
+    "variable": "n",
+    "solution": "-16",
+    "steps": [
+      {
+        "equation": "n = -16",
+        "why": "Add 19 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-408",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-12)a = -48",
+    "variable": "a",
+    "solution": "4",
+    "steps": [
+      {
+        "equation": "a = 4",
+        "why": "Divide both sides by -12"
+      }
+    ]
+  },
+  {
+    "id": "os-409",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-7 = m - (-23)",
+    "variable": "m",
+    "solution": "-30",
+    "steps": [
+      {
+        "equation": "-30 = m",
+        "why": "Add -23 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-410",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "x - 20 = -26",
+    "variable": "x",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "x = -6",
+        "why": "Add 20 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-411",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-117 = (-9)p",
+    "variable": "p",
+    "solution": "13",
+    "steps": [
+      {
+        "equation": "13 = p",
+        "why": "Divide both sides by -9"
+      }
+    ]
+  },
+  {
+    "id": "os-412",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "k - (-1) = 30",
+    "variable": "k",
+    "solution": "29",
+    "steps": [
+      {
+        "equation": "k = 29",
+        "why": "Add -1 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-413",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "z/8 = 7",
+    "variable": "z",
+    "solution": "56",
+    "steps": [
+      {
+        "equation": "z = 56",
+        "why": "Multiply both sides by 8"
+      }
+    ]
+  },
+  {
+    "id": "os-414",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - 23 = -38",
+    "variable": "p",
+    "solution": "-15",
+    "steps": [
+      {
+        "equation": "p = -15",
+        "why": "Add 23 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-415",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "6 = 1n",
+    "variable": "n",
+    "solution": "6",
+    "steps": [
+      {
+        "equation": "6 = n",
+        "why": "Divide both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-416",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-1 = a - (-11)",
+    "variable": "a",
+    "solution": "-12",
+    "steps": [
+      {
+        "equation": "-12 = a",
+        "why": "Add -11 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-417",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "p + (-13) = -24",
+    "variable": "p",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "p = -11",
+        "why": "Subtract -13 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-418",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-4 = 1m",
+    "variable": "m",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "-4 = m",
+        "why": "Divide both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-419",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "1 = y - 1",
+    "variable": "y",
+    "solution": "2",
+    "steps": [
+      {
+        "equation": "2 = y",
+        "why": "Add 1 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-420",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-29 = m - 3",
+    "variable": "m",
+    "solution": "-26",
+    "steps": [
+      {
+        "equation": "-26 = m",
+        "why": "Add 3 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-421",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/6 = 6",
+    "variable": "n",
+    "solution": "36",
+    "steps": [
+      {
+        "equation": "n = 36",
+        "why": "Multiply both sides by 6"
+      }
+    ]
+  },
+  {
+    "id": "os-422",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/(-8) = -12",
+    "variable": "p",
+    "solution": "96",
+    "steps": [
+      {
+        "equation": "p = 96",
+        "why": "Multiply both sides by -8"
+      }
+    ]
+  },
+  {
+    "id": "os-423",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-13 = p + 2",
+    "variable": "p",
+    "solution": "-15",
+    "steps": [
+      {
+        "equation": "-15 = p",
+        "why": "Subtract 2 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-424",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "228 = 12y",
+    "variable": "y",
+    "solution": "19",
+    "steps": [
+      {
+        "equation": "19 = y",
+        "why": "Divide both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-425",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-16 = (-6) + y",
+    "variable": "y",
+    "solution": "-10",
+    "steps": [
+      {
+        "equation": "-10 = y",
+        "why": "Subtract -6 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-426",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "84 = (-4)b",
+    "variable": "b",
+    "solution": "-21",
+    "steps": [
+      {
+        "equation": "-21 = b",
+        "why": "Divide both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-427",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "68 = (-4)y",
+    "variable": "y",
+    "solution": "-17",
+    "steps": [
+      {
+        "equation": "-17 = y",
+        "why": "Divide both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-428",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-38 = (-24) + n",
+    "variable": "n",
+    "solution": "-14",
+    "steps": [
+      {
+        "equation": "-14 = n",
+        "why": "Subtract -24 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-429",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "4x = -72",
+    "variable": "x",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "x = -18",
+        "why": "Divide both sides by 4"
+      }
+    ]
+  },
+  {
+    "id": "os-430",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-35 = 7k",
+    "variable": "k",
+    "solution": "-5",
+    "steps": [
+      {
+        "equation": "-5 = k",
+        "why": "Divide both sides by 7"
+      }
+    ]
+  },
+  {
+    "id": "os-431",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/2 = -9",
+    "variable": "n",
+    "solution": "-18",
+    "steps": [
+      {
+        "equation": "n = -18",
+        "why": "Multiply both sides by 2"
+      }
+    ]
+  },
+  {
+    "id": "os-432",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "a + (-21) = -7",
+    "variable": "a",
+    "solution": "14",
+    "steps": [
+      {
+        "equation": "a = 14",
+        "why": "Subtract -21 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-433",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "11k = -187",
+    "variable": "k",
+    "solution": "-17",
+    "steps": [
+      {
+        "equation": "k = -17",
+        "why": "Divide both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-434",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-4 = n - 27",
+    "variable": "n",
+    "solution": "23",
+    "steps": [
+      {
+        "equation": "23 = n",
+        "why": "Add 27 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-435",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "1k = 5",
+    "variable": "k",
+    "solution": "5",
+    "steps": [
+      {
+        "equation": "k = 5",
+        "why": "Divide both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-436",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "44 = 23 + a",
+    "variable": "a",
+    "solution": "21",
+    "steps": [
+      {
+        "equation": "21 = a",
+        "why": "Subtract 23 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-437",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "14b = 154",
+    "variable": "b",
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "b = 11",
+        "why": "Divide both sides by 14"
+      }
+    ]
+  },
+  {
+    "id": "os-438",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "18 + y = 26",
+    "variable": "y",
+    "solution": "8",
+    "steps": [
+      {
+        "equation": "y = 8",
+        "why": "Subtract 18 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-439",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "60 = 5z",
+    "variable": "z",
+    "solution": "12",
+    "steps": [
+      {
+        "equation": "12 = z",
+        "why": "Divide both sides by 5"
+      }
+    ]
+  },
+  {
+    "id": "os-440",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "11 = n/(-9)",
+    "variable": "n",
+    "solution": "-99",
+    "steps": [
+      {
+        "equation": "-99 = n",
+        "why": "Multiply both sides by -9"
+      }
+    ]
+  },
+  {
+    "id": "os-441",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "15z = 300",
+    "variable": "z",
+    "solution": "20",
+    "steps": [
+      {
+        "equation": "z = 20",
+        "why": "Divide both sides by 15"
+      }
+    ]
+  },
+  {
+    "id": "os-442",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "b/10 = 18",
+    "variable": "b",
+    "solution": "180",
+    "steps": [
+      {
+        "equation": "b = 180",
+        "why": "Multiply both sides by 10"
+      }
+    ]
+  },
+  {
+    "id": "os-443",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-6)m = 84",
+    "variable": "m",
+    "solution": "-14",
+    "steps": [
+      {
+        "equation": "m = -14",
+        "why": "Divide both sides by -6"
+      }
+    ]
+  },
+  {
+    "id": "os-444",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-15)b = 135",
+    "variable": "b",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "b = -9",
+        "why": "Divide both sides by -15"
+      }
+    ]
+  },
+  {
+    "id": "os-445",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "12 = m - (-29)",
+    "variable": "m",
+    "solution": "-17",
+    "steps": [
+      {
+        "equation": "-17 = m",
+        "why": "Add -29 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-446",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-11)z = 44",
+    "variable": "z",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "z = -4",
+        "why": "Divide both sides by -11"
+      }
+    ]
+  },
+  {
+    "id": "os-447",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-5 = p/(-10)",
+    "variable": "p",
+    "solution": "50",
+    "steps": [
+      {
+        "equation": "50 = p",
+        "why": "Multiply both sides by -10"
+      }
+    ]
+  },
+  {
+    "id": "os-448",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "n - (-22) = 33",
+    "variable": "n",
+    "solution": "11",
+    "steps": [
+      {
+        "equation": "n = 11",
+        "why": "Add -22 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-449",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "9 = (-9)n",
+    "variable": "n",
+    "solution": "-1",
+    "steps": [
+      {
+        "equation": "-1 = n",
+        "why": "Divide both sides by -9"
+      }
+    ]
+  },
+  {
+    "id": "os-450",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-3)z = 12",
+    "variable": "z",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "z = -4",
+        "why": "Divide both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-451",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "k - (-18) = -3",
+    "variable": "k",
+    "solution": "-21",
+    "steps": [
+      {
+        "equation": "k = -21",
+        "why": "Add -18 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-452",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "29 = p - (-23)",
+    "variable": "p",
+    "solution": "6",
+    "steps": [
+      {
+        "equation": "6 = p",
+        "why": "Add -23 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-453",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "y - (-11) = 9",
+    "variable": "y",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "y = -2",
+        "why": "Add -11 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-454",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "(-8)b = 48",
+    "variable": "b",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "b = -6",
+        "why": "Divide both sides by -8"
+      }
+    ]
+  },
+  {
+    "id": "os-455",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-40 = m - 21",
+    "variable": "m",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "-19 = m",
+        "why": "Add 21 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-456",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "9y = 90",
+    "variable": "y",
+    "solution": "10",
+    "steps": [
+      {
+        "equation": "y = 10",
+        "why": "Divide both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-457",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "32 = y - (-13)",
+    "variable": "y",
+    "solution": "19",
+    "steps": [
+      {
+        "equation": "19 = y",
+        "why": "Add -13 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-458",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-12 = p - 27",
+    "variable": "p",
+    "solution": "15",
+    "steps": [
+      {
+        "equation": "15 = p",
+        "why": "Add 27 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-459",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-28 = p + (-24)",
+    "variable": "p",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "-4 = p",
+        "why": "Subtract -24 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-460",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "n/(-4) = 10",
+    "variable": "n",
+    "solution": "-40",
+    "steps": [
+      {
+        "equation": "n = -40",
+        "why": "Multiply both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-461",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-12 = b/(-9)",
+    "variable": "b",
+    "solution": "108",
+    "steps": [
+      {
+        "equation": "108 = b",
+        "why": "Multiply both sides by -9"
+      }
+    ]
+  },
+  {
+    "id": "os-462",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-15 = n - 6",
+    "variable": "n",
+    "solution": "-9",
+    "steps": [
+      {
+        "equation": "-9 = n",
+        "why": "Add 6 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-463",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "225 = (-9)m",
+    "variable": "m",
+    "solution": "-25",
+    "steps": [
+      {
+        "equation": "-25 = m",
+        "why": "Divide both sides by -9"
+      }
+    ]
+  },
+  {
+    "id": "os-464",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/11 = -3",
+    "variable": "p",
+    "solution": "-33",
+    "steps": [
+      {
+        "equation": "p = -33",
+        "why": "Multiply both sides by 11"
+      }
+    ]
+  },
+  {
+    "id": "os-465",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-39 = 3x",
+    "variable": "x",
+    "solution": "-13",
+    "steps": [
+      {
+        "equation": "-13 = x",
+        "why": "Divide both sides by 3"
+      }
+    ]
+  },
+  {
+    "id": "os-466",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-2 = p/12",
+    "variable": "p",
+    "solution": "-24",
+    "steps": [
+      {
+        "equation": "-24 = p",
+        "why": "Multiply both sides by 12"
+      }
+    ]
+  },
+  {
+    "id": "os-467",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "p/(-7) = -13",
+    "variable": "p",
+    "solution": "91",
+    "steps": [
+      {
+        "equation": "p = 91",
+        "why": "Multiply both sides by -7"
+      }
+    ]
+  },
+  {
+    "id": "os-468",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "a - (-6) = 13",
+    "variable": "a",
+    "solution": "7",
+    "steps": [
+      {
+        "equation": "a = 7",
+        "why": "Add -6 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-469",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "p + 5 = 25",
+    "variable": "p",
+    "solution": "20",
+    "steps": [
+      {
+        "equation": "p = 20",
+        "why": "Subtract 5 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-470",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-24 = (-13) + y",
+    "variable": "y",
+    "solution": "-11",
+    "steps": [
+      {
+        "equation": "-11 = y",
+        "why": "Subtract -13 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-471",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-31 = (-17) + a",
+    "variable": "a",
+    "solution": "-14",
+    "steps": [
+      {
+        "equation": "-14 = a",
+        "why": "Subtract -17 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-472",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "m - (-18) = 41",
+    "variable": "m",
+    "solution": "23",
+    "steps": [
+      {
+        "equation": "m = 23",
+        "why": "Add -18 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-473",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "z/(-3) = 15",
+    "variable": "z",
+    "solution": "-45",
+    "steps": [
+      {
+        "equation": "z = -45",
+        "why": "Multiply both sides by -3"
+      }
+    ]
+  },
+  {
+    "id": "os-474",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "m + 12 = -3",
+    "variable": "m",
+    "solution": "-15",
+    "steps": [
+      {
+        "equation": "m = -15",
+        "why": "Subtract 12 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-475",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "39 = a + 12",
+    "variable": "a",
+    "solution": "27",
+    "steps": [
+      {
+        "equation": "27 = a",
+        "why": "Subtract 12 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-476",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-6 = 13 + n",
+    "variable": "n",
+    "solution": "-19",
+    "steps": [
+      {
+        "equation": "-19 = n",
+        "why": "Subtract 13 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-477",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "16 = (-4)m",
+    "variable": "m",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "-4 = m",
+        "why": "Divide both sides by -4"
+      }
+    ]
+  },
+  {
+    "id": "os-478",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "p - 20 = -22",
+    "variable": "p",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "p = -2",
+        "why": "Add 20 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-479",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-31 = y - 23",
+    "variable": "y",
+    "solution": "-8",
+    "steps": [
+      {
+        "equation": "-8 = y",
+        "why": "Add 23 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-480",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "10b = 30",
+    "variable": "b",
+    "solution": "3",
+    "steps": [
+      {
+        "equation": "b = 3",
+        "why": "Divide both sides by 10"
+      }
+    ]
+  },
+  {
+    "id": "os-481",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "y/1 = -12",
+    "variable": "y",
+    "solution": "-12",
+    "steps": [
+      {
+        "equation": "y = -12",
+        "why": "Multiply both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-482",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "16 = 19 + a",
+    "variable": "a",
+    "solution": "-3",
+    "steps": [
+      {
+        "equation": "-3 = a",
+        "why": "Subtract 19 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-483",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "21 = 29 + p",
+    "variable": "p",
+    "solution": "-8",
+    "steps": [
+      {
+        "equation": "-8 = p",
+        "why": "Subtract 29 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-484",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "48 = (-8)a",
+    "variable": "a",
+    "solution": "-6",
+    "steps": [
+      {
+        "equation": "-6 = a",
+        "why": "Divide both sides by -8"
+      }
+    ]
+  },
+  {
+    "id": "os-485",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-12 = a + 11",
+    "variable": "a",
+    "solution": "-23",
+    "steps": [
+      {
+        "equation": "-23 = a",
+        "why": "Subtract 11 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-486",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "z/4 = -6",
+    "variable": "z",
+    "solution": "-24",
+    "steps": [
+      {
+        "equation": "z = -24",
+        "why": "Multiply both sides by 4"
+      }
+    ]
+  },
+  {
+    "id": "os-487",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "100 = (-5)p",
+    "variable": "p",
+    "solution": "-20",
+    "steps": [
+      {
+        "equation": "-20 = p",
+        "why": "Divide both sides by -5"
+      }
+    ]
+  },
+  {
+    "id": "os-488",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-10 = 1a",
+    "variable": "a",
+    "solution": "-10",
+    "steps": [
+      {
+        "equation": "-10 = a",
+        "why": "Divide both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-489",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "-36 = 9n",
+    "variable": "n",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "-4 = n",
+        "why": "Divide both sides by 9"
+      }
+    ]
+  },
+  {
+    "id": "os-490",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "x + 1 = 25",
+    "variable": "x",
+    "solution": "24",
+    "steps": [
+      {
+        "equation": "x = 24",
+        "why": "Subtract 1 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-491",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "left",
+    "equation": "4x = 84",
+    "variable": "x",
+    "solution": "21",
+    "steps": [
+      {
+        "equation": "x = 21",
+        "why": "Divide both sides by 4"
+      }
+    ]
+  },
+  {
+    "id": "os-492",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "left",
+    "equation": "6 + z = 9",
+    "variable": "z",
+    "solution": "3",
+    "steps": [
+      {
+        "equation": "z = 3",
+        "why": "Subtract 6 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-493",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "-3 = n + (-11)",
+    "variable": "n",
+    "solution": "8",
+    "steps": [
+      {
+        "equation": "8 = n",
+        "why": "Subtract -11 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-494",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "left",
+    "equation": "a - 19 = -43",
+    "variable": "a",
+    "solution": "-24",
+    "steps": [
+      {
+        "equation": "a = -24",
+        "why": "Add 19 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-495",
+    "lesson": "one-step",
+    "form": "addition",
+    "variableSide": "right",
+    "equation": "31 = a + 18",
+    "variable": "a",
+    "solution": "13",
+    "steps": [
+      {
+        "equation": "13 = a",
+        "why": "Subtract 18 from both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-496",
+    "lesson": "one-step",
+    "form": "subtraction",
+    "variableSide": "right",
+    "equation": "-25 = n - 20",
+    "variable": "n",
+    "solution": "-5",
+    "steps": [
+      {
+        "equation": "-5 = n",
+        "why": "Add 20 to both sides"
+      }
+    ]
+  },
+  {
+    "id": "os-497",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "right",
+    "equation": "-2 = n/1",
+    "variable": "n",
+    "solution": "-2",
+    "steps": [
+      {
+        "equation": "-2 = n",
+        "why": "Multiply both sides by 1"
+      }
+    ]
+  },
+  {
+    "id": "os-498",
+    "lesson": "one-step",
+    "form": "multiplication",
+    "variableSide": "right",
+    "equation": "52 = (-13)x",
+    "variable": "x",
+    "solution": "-4",
+    "steps": [
+      {
+        "equation": "-4 = x",
+        "why": "Divide both sides by -13"
+      }
+    ]
+  },
+  {
+    "id": "os-499",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "b/(-5) = 16",
+    "variable": "b",
+    "solution": "-80",
+    "steps": [
+      {
+        "equation": "b = -80",
+        "why": "Multiply both sides by -5"
+      }
+    ]
+  },
+  {
+    "id": "os-500",
+    "lesson": "one-step",
+    "form": "division",
+    "variableSide": "left",
+    "equation": "k/(-4) = 12",
+    "variable": "k",
+    "solution": "-48",
+    "steps": [
+      {
+        "equation": "k = -48",
+        "why": "Multiply both sides by -4"
+      }
+    ]
   }
 ]

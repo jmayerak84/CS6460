@@ -1,0 +1,86 @@
+{
+  "addition": [
+    "A number is being added to {variable}. Which inverse operation undoes addition?",
+    "Subtract that number from both sides."
+  ],
+  "subtraction": [
+    "A number is being subtracted from {variable}. Which inverse operation undoes subtraction?",
+    "Add that number to both sides."
+  ],
+  "multiplication": [
+    "{variable} is being multiplied by its coefficient. Which inverse operation undoes multiplication?",
+    "Divide both sides by the coefficient, including its sign."
+  ],
+  "division": [
+    "{variable} is being divided by a number. Which inverse operation undoes division?",
+    "Multiply both sides by that number, including its sign."
+  ],
+  "multiplication-addition": [
+    "Undo the operations in reverse order: deal with the added number before the coefficient.",
+    "Subtract the constant from both sides, then divide both sides by the coefficient."
+  ],
+  "multiplication-subtraction": [
+    "Undo the operations in reverse order: deal with the subtracted number before the coefficient.",
+    "Add the constant to both sides, then divide both sides by the coefficient."
+  ],
+  "division-addition": [
+    "Undo the addition first, then the division.",
+    "Subtract the constant from both sides, then multiply both sides by the divisor."
+  ],
+  "division-subtraction": [
+    "Undo the subtraction first, then the division.",
+    "Add the constant to both sides, then multiply both sides by the divisor."
+  ],
+  "grouped-addition": [
+    "The whole expression in parentheses is being divided. Undo the division first.",
+    "Multiply both sides by the denominator, then subtract the constant from both sides."
+  ],
+  "grouped-subtraction": [
+    "The whole expression in parentheses is being divided. Undo the division first.",
+    "Multiply both sides by the denominator, then add the constant to both sides."
+  ],
+  "combining-like-terms-adjacent": [
+    "Start by simplifying: combine the {variable} terms on the same side.",
+    "Add the coefficients of the {variable} terms, then solve the two-step equation that is left."
+  ],
+  "combining-like-terms-split": [
+    "The {variable} terms are separated by a constant. Combine like terms first.",
+    "Add the coefficients of the {variable} terms, then solve the two-step equation that is left."
+  ],
+  "distribution": [
+    "Distribute the number outside the parentheses to each term inside.",
+    "Multiply the outside number by both terms in the parentheses, then solve the two-step equation that is left."
+  ],
+  "distribution-outside-constant": [
+    "Distribute first, then combine the constant terms.",
+    "Multiply the outside number by each term in the parentheses, combine the constants, then solve."
+  ],
+  "variables-both-sides": [
+    "Get all of the {variable} terms on one side of the equation.",
+    "Subtract one of the {variable} terms from both sides, then solve the two-step equation that is left."
+  ],
+  "distribution-both-sides": [
+    "Distribute on both sides of the equation first.",
+    "After distributing, move the {variable} terms to one side and the constants to the other."
+  ],
+  "distribution-both-sides-outer-terms": [
+    "Distribute on both sides, then combine the constants on each side.",
+    "Once each side is simplified, move the {variable} terms to one side and the constants to the other."
+  ],
+  "subtracted-parentheses": [
+    "The minus sign in front of the parentheses means every term inside is multiplied by -1.",
+    "Change the sign of every term inside the subtracted parentheses, distribute on the other side, then combine like terms."
+  ],
+  "double-distribution": [
+    "Distribute both sets of parentheses on the left side.",
+    "After distributing, combine like terms, then move the {variable} terms to one side."
+  ],
+  "fractional-coefficient": [
+    "{variable} is being multiplied by a fraction. What number can you multiply a fraction by to get 1?",
+    "Multiply both sides by the reciprocal of the coefficient."
+  ],
+  "default": [
+    "Which operation is being done to {variable}? Undo it with the inverse operation on both sides.",
+    "Work in reverse order: undo addition and subtraction before multiplication and division."
+  ]
+}
