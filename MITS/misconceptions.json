@@ -1,0 +1,86 @@
+{
+    "one-side-only": {
+        "label": "Operation done to one side of the equation only.",
+        "category": "Balance",
+        "feedback": "You changed the {side} side but not the other.",
+        "hint": "Remember an equation is like a balance scale, what you do to one side, you must do to the other side.",
+        "priority": 1
+    },
+    "wrong-inverse": {
+        "label": "Used the same operation instead of the inverse operation.",
+        "category": "Inverse Operations",
+        "feedback": "You used the same operation that is already in the equation instead of its inverse operation.",
+        "hint": "What is being done to {variable}? Check the sign in front of the number, then use the inverse operation.",
+        "priority": 2
+    },
+    "wrong-order": {
+        "label": "Undid the operations in the wrong order.",
+        "category": "Inverse Operations",
+        "feedback": "You undid the operations in the wrong order. Undo addition and subtraction before multiplication and division, unless the whole side is divided.",
+        "hint": "Which operation was done to {variable} last? That's the one to undo first.",
+        "priority": 2.5
+    },
+    "treats-coefficient-as-term": {
+        "label": "Treated the coefficient as a number being added or subtracted.",
+        "category": "Structure",
+        "feedback": "The coefficient is multiplying or dividing {variable}, not being added or subtracted.",
+        "hint": "In 4x, the coefficient 4 multiplies x, and in x/6, x is divided by 6. What inverse operation undoes that?",
+        "priority": 3
+    },
+    "not-reciprocal": {
+        "label": "Multiplied by the fraction instead of its reciprocal.",
+        "category": "Fractions",
+        "feedback": "Multiplying by the same fraction changes the coefficient instead of undoing it.",
+        "hint": "What number can you multiply a fraction by to get 1?",
+        "priority": 4
+    },
+    "denominator-only": {
+        "label": "Undid only the denominator of the coefficient.",
+        "category": "Fractions",
+        "feedback": "You undid the denominator, but the numerator is still multiplying {variable}.",
+        "hint": "A fractional coefficient has two parts. Can you undo both in one step?",
+        "priority": 5
+    },
+    "numerator-only": {
+        "label": "Undid only the numerator of the coefficient.",
+        "category": "Fractions",
+        "feedback": "You undid the numerator, but {variable} is still being divided by the denominator.",
+        "hint": "A fractional coefficient has two parts. Can you undo both in one step?",
+        "priority": 6
+    },
+    "reversed-order": {
+        "label": "Subtracted or divided in the wrong order.",
+        "category": "Inverse Operations",
+        "feedback": "You chose the correct inverse operation, but the numbers are in the wrong order.",
+        "hint": "Start with the number that is already alone on its side, then apply the operation to it.",
+        "priority": 7
+    },
+    "integer-sign-error": {
+        "label": "Correct value with the wrong sign.",
+        "category": "Integers",
+        "feedback": "Your number is right, but the sign is not.",
+        "hint": "Check the sign of the number or coefficient you used, and the sign rules for negatives.",
+        "priority": 8
+    },
+    "integer-arithmetic-error": {
+        "label": "Arithmetic error with negative numbers.",
+        "category": "Integers",
+        "feedback": "Your inverse operation is correct, but the arithmetic with negative numbers is off.",
+        "hint": "Try the calculation on a number line, or substitute your answer back into the original equation.",
+        "priority": 9
+    },
+    "fraction-error": {
+        "label": "Error multiplying fractions.",
+        "category": "Fractions",
+        "feedback": "Your inverse operation is correct, but check your fraction multiplication.",
+        "hint": "Multiply the numerators together and the denominators together, then simplify.",
+        "priority": 10
+    },
+    "unrecognized": {
+        "label": "Incorrect step that matches no known misconception.",
+        "category": "Other",
+        "feedback": "This line is not equivalent to the one before it.",
+        "hint": "Compare this line to the previous one. Which inverse operation did you use, and did you use it on both sides?",
+        "priority": 99
+    }
+}

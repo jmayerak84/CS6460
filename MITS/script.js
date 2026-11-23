@@ -31,6 +31,7 @@ const state= {
     guidedStreak: 0,
     missStreak: 0,
     modeNotice: "",
+    errorCounts: {},
     stats: {solved: 0, streak: 0, correct: 0, attempts: 0}
 };
 
@@ -50,6 +51,7 @@ const MASTERY_WINDOW = 5;
 const MASTERY_NEEDED = 4;
 
 let hints = {};
+let misconceptions = {};
 const GUIDED_TO_MASTERY = 2;
 const MASTERY_TO_GUIDED = 2;
 const FADED_TO_GUIDED = 2;
@@ -67,14 +69,16 @@ function modeAfterWorked(){
 async function loadData(){
     const lesson = new URLSearchParams(window.location.search).get("lesson") || "one-step";
     state.lesson = LESSON_FILES[lesson] ? lesson : "one-step";
-    const [problemRes, codeRes, hintRes] = await Promise.all([
+    const [problemRes, codeRes, hintRes, misconRes] = await Promise.all([
         fetch(LESSON_FILES[state.lesson]),
         fetch("completion_codes.json"),
-        fetch("hints.json")
+        fetch("hints.json"),
+        fetch("misconceptions.json")
     ]);
     problems = await problemRes.json();
     lessonCodes = await codeRes.json();
     hints = await hintRes.json();
+    misconceptions = await misconRes.json();
     loadProblem(randomProblemIndex());
 }
 
@@ -183,6 +187,94 @@ function isSolvedLine(line, variable){
 
 
 
+
+
+const N = String.raw`\(?-?\d+\)?`;
+const num = t => Number(t.replace(/[()]/g, ""));
+
+function problemParts(problem){
+    const v = problem.variable;
+    const [left, right] = problem.equation.replace(/\s+/g, "").split("=");
+    const side = left.includes(v) ? left : right;
+    const c = num(left.includes(v) ? right : left);
+    const m = (pattern) => side.match(new RegExp("^" + pattern.replaceAll("V", v).replaceAll("N", "(" + N + ")") + "$"));
+    let r;
+    switch(problem.form){
+        case "addition":
+            if((r = m("V\\+N"))) return {c, a: num(r[1])};
+            if((r = m("N\\+V"))) return {c, a: num(r[1])};
+            break;
+        case "subtraction":    if ((r = m("V-N"))) return {c, a: num(r[1])}; break;
+        case "multiplication": if ((r = m("NV")))  return {c, a: num(r[1])}; break;
+        case "division":       if ((r = m("V/N"))) return {c, a: num(r[1])}; break;
+        case "multiplication-addition":
+            if ((r = m("NV\\+N"))) return {c, a: num(r[1]), k: num(r[2])};
+            if ((r = m("N\\+NV"))) return {c, a: num(r[2]), k: num(r[1])};
+            break;
+        case "multiplication-subtraction":
+            if ((r = m("NV-N"))) return {c, a: num(r[1]), k: -num(r[2])}; break;
+        case "division-addition":
+            if ((r = m("V/N\\+N"))) return {c, d: num(r[1]), k: num(r[2])};
+            if ((r = m("N\\+V/N"))) return {c, d: num(r[2]), k: num(r[1])};
+            break;
+        case "division-subtraction":
+            if ((r = m("V/N-N"))) return {c, d: num(r[1]), k: -num(r[2])}; break;
+        case "grouped-addition":
+            if ((r = m("\\(V\\+N\\)/N"))) return {c, k: num(r[1]), d: num(r[2])};
+            if ((r = m("\\(N\\+V\\)/N"))) return {c, k: num(r[1]), d: num(r[2])};
+            break;
+        case "grouped-subtraction":
+            if ((r = m("\\(V-N\\)/N"))) return {c, k: -num(r[1]), d: num(r[2])}; break;
+    }
+    return null;
+}
+
+
+function mistakeValues(problem){
+    const p = problemParts(problem);
+    if (!p) return [];
+    const {c, a, d, k} = p;
+    const answer = toNumber(problem.solution);
+    switch (problem.form){
+        case "addition":       return [["wrong-inverse", c + a], ["one-side-only", c], ["reversed-order", a - c], ["integer-sign-error", -answer]];
+        case "subtraction":    return [["wrong-inverse", c - a], ["one-side-only", c], ["integer-sign-error", -answer]];
+        case "multiplication": return [["wrong-inverse", c * a], ["one-side-only", c], ["reversed-order", a / c], ["treats-coefficient-as-term", c - a], ["integer-sign-error", -answer]];
+        case "division":       return [["wrong-inverse", c / a], ["one-side-only", c], ["treats-coefficient-as-term", c + a], ["integer-sign-error", -answer]];
+        case "multiplication-addition":
+        case "multiplication-subtraction":
+            return [["wrong-inverse", (c + k) / a], ["wrong-inverse", (c - k) * a], ["one-side-only", c / a], ["wrong-order", c / a - k], ["integer-sign-error", -answer]];
+        case "division-addition":
+        case "division-subtraction":
+            return [["wrong-inverse", (c + k) * d], ["wrong-inverse", (c - k) / d], ["one-side-only", c * d], ["wrong-order", c * d - k], ["integer-sign-error", -answer]];
+        case "grouped-addition":
+        case "grouped-subtraction":
+            return [["wrong-order", (c - k) * d], ["wrong-inverse", c * d + k], ["wrong-inverse", c / d - k], ["integer-sign-error", -answer]];
+    }
+    return [];
+}
+
+
+function diagnose(value){
+    const answer = toNumber(state.problem.solution);
+    const matches = mistakeValues(state.problem)
+        .filter(([id, v]) => Number.isFinite(v) && !sameValue(v, answer) && sameValue(v, value) && misconceptions[id])
+        .map(([id]) => id);
+    if (matches.length === 0) return null;
+    matches.sort((x, y) => misconceptions[x].priority - misconceptions[y].priority);
+    return matches[0];
+}
+
+
+function wrongMessage(value, general){
+    const id = diagnose(value);
+    state.errorCounts[id || "unrecognized"] = (state.errorCounts[id || "unrecognized"] || 0) + 1;
+    if (!id) return general;
+    return misconceptions[id].feedback
+        .replaceAll("{variable}", state.variable)
+        .replaceAll("{side}", state.problem.variableSide);
+}
+
+
 function checkStep(i){
     const text = state.steps[i].trim();
     if(!text) return false;
@@ -215,7 +307,7 @@ function checkStep(i){
         
         state.results[i] = {
             status: "wrong",
-            message: "This line isn't equivalent to the original equation. Check that you used the inverse operation on both sides."
+            message: wrongMessage(value, "This line isn't equivalent to the original equation. Check that you used the inverse operation on both sides.")
         };
         state.stats.streak = 0;
         state.hadError = true;
@@ -293,7 +385,7 @@ function checkFaded(){
     if (value === null) {
         state.fadedResult = {status: "invalid", message: `I can't read this line. Write one equation with a single = sign using ${state.variable}.`};
     } else if (!sameValue(value, answer)) {
-        state.fadedResult = {status: "wrong", message: "This step isn't equivalent to the line above it. Look at the line above and think about what comes next."};
+        state.fadedResult = {status: "wrong", message: wrongMessage(value, "This step isn't equivalent to the line above it. Look at the line above and think about what comes next.")};
     } else if (!isLastStep && isSolvedLine(text, state.variable)) {
         // No skipping ahead to the final answer from a middle step
         state.fadedResult = {status: "invalid", message: "That's the final answer. What step comes before it?"};
