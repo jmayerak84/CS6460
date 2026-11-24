@@ -265,13 +265,27 @@ function diagnose(value){
 }
 
 
+
+const ERROR_LIMIT = 3;
+
+function recordError(id){
+    const key = id || "unrecognized";
+    state.errorCounts[key] = (state.errorCounts[key] || 0) + 1;
+    if (state.errorCounts[key] % ERROR_LIMIT !== 0) return "";
+    const what = id ? "this same kind of mistake" : `${ERROR_LIMIT} steps that weren't equivalent`;
+    const count = id ? ` ${ERROR_LIMIT} times` : "";
+    return ` You've made ${what}${count}. eSchool: book office hours with your teacher. ` + 
+           `Summer school or credit recovery: ask your content teacher.`;
+}
+
+
 function wrongMessage(value, general){
     const id = diagnose(value);
-    state.errorCounts[id || "unrecognized"] = (state.errorCounts[id || "unrecognized"] || 0) + 1;
-    if (!id) return general;
+    const referral = recordError(id);
+    if (!id) return general + referral;
     return misconceptions[id].feedback
         .replaceAll("{variable}", state.variable)
-        .replaceAll("{side}", state.problem.variableSide);
+        .replaceAll("{side}", state.problem.variableSide) + referral;
 }
 
 
@@ -455,7 +469,7 @@ function submitSolution(){
         }
         if(!sameValue(value, answer)){
 
-            state.results[i] = {status: "wrong", message: "This is the first line that isn't equivalent to the original equation. Check the step that led to it."};
+            state.results[i] = {status: "wrong", message: "This is the first line that isn't equivalent to the original equation. Check the step that led to it." + recordError(diagnose(value))};
             state.stats.attempts++;
             state.stats.streak = 0;
             state.hadError = true;
