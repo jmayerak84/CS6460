@@ -33,6 +33,8 @@ const state= {
     modeNotice: "",
     errorCounts: {},
     referral: null,
+    reasons: [],
+    fadedReason: "",
     stats: {solved: 0, streak: 0, correct: 0, attempts: 0}
 };
 
@@ -106,6 +108,8 @@ function loadProblem(index){
     state.hintsUsed = 0;
     state.revealed = 0;
     state.referral = null;
+    state.reasons = [];
+    state.fadedReason = "";
     
     const stepCount = (problem.steps || []).length;
     state.blankIndex = Math.max(0, stepCount - 1 - state.fadedDone);
@@ -318,6 +322,66 @@ function wrongMessage(value, general){
 }
 
 
+
+const REASONS = [
+    {id: "add", label: "Add to both sides"},
+    {id: "subtract", label: "Subtract from both sides"},
+    {id: "multiply", label: "Multiply both sides"},
+    {id: "divide", label: "Divide both sides"},
+    {id: "distribute", label: "Distribute"},
+    {id: "combine", label: "Combine like terms"},
+    {id: "move", label: "Move variable terms to one side"}
+];
+
+const reasonLabel = id => (REASONS.find(r => r.id === id) || {}).label || "";
+const squash = text => text.replace(/\s+/g, "");
+
+
+
+function reasonsFor(why, variable){
+    const w = why.toLowerCase();
+    const term = why.split(" ")[1] || "";
+    if(w.startsWith("distribute")) return ["distribute"];
+    if(w.startsWith("combine")) return ["combine"];
+    if(w.startsWith("multiply")) return ["multiply"];
+    if(w.startsWith("divide")) return ["divide"];
+    if(w.startsWith("add") || w.startsWith("subtract")){
+        const op = w.startsWith("add") ? "add" : "subtract";
+        const ids = [op];
+        if(term.includes(variable)) ids.push("move");
+        if(term.startsWith("-")) ids.push(op === "add" ? "subtract" : "add");
+        return ids;
+    }
+    return [];
+}
+
+
+function expectedReasons(i){
+    const step = (state.problem.steps || [])[i];
+    return step ? reasonsFor(step.why, state.variable) : [];
+}
+
+
+function reasonSelect(selected, onChoose){
+    const select = document.createElement("select");
+    select.className = "reasonSelect";
+    select.setAttribute("aria-label", "What will you do next?");
+    const prompt = document.createElement("option");
+    prompt.value = "";
+    prompt.textContent = "What will you do next?";
+    select.append(prompt);
+    REASONS.forEach(r => {
+        const option = document.createElement("option");
+        option.value = r.id;
+        option.textContent  = r.label;
+        select.append(option);
+    });
+    select.value = selected || "";
+    select.disabled  = state.solved;
+    select.addEventListener("change", () => onChoose(select.value, select));
+    return select;
+}
+
 function checkStep(i){
     const text = state.steps[i].trim();
     if(!text) return false;
@@ -334,6 +398,21 @@ function checkStep(i){
         return false;
     }
 
+
+
+
+    const worked = state.problem.steps || [];
+    const onPath = state.steps.slice(0, i).every((line, j) => worked[j] && squash(line) === squash(worked[j].equation));
+    const expected = onPath ? expectedReasons(i) : [];
+    const workedLine = onPath ? worked[i] : null;
+    const reason = state.reasons[i];
+    const reasonFits = expected.length === 0 || expected.includes(reason);
+    if(sameValue(value, answer) && !reasonFits && workedLine && squash(text) === squash(workedLine.equation)){
+        state.results[i] = {status: "invalid", message: `Your step is right, but "${reasonLabel(reason)}" isn't what you did. Pick the reason that matches your step.`};
+        return false;
+    }
+    const planNote = reasonFits ? "" : ` That works. The worked solution used "${reasonLabel(expected[0])}" here.`;
+
     state.stats.attempts++;
     if(sameValue(value, answer)){
         state.stats.correct++;
@@ -342,15 +421,16 @@ function checkStep(i){
             state.stats.solved++;
             state.stats.streak++;
             finishProblem(!state.hadError && state.hintsUsed === 0);
-            state.results[i] = {status: "correct", message: `Solved! ${state.variable} = ${state.problem.solution}. Click "New Problem" to keep practicing.`};
+            state.results[i] = {status: "correct", message: `Solved! ${state.variable} = ${state.problem.solution}.${planNote} Click "New Problem" to keep practicing.`};
         } else{
-            state.results[i] = {status: "correct", message: "Valid step. Keep Going."};
+            state.results[i] = {status: "correct", message: "Valid step. Keep Going." + planNote};
         }
     } else {
         
         state.results[i] = {
             status: "wrong",
-            message: wrongMessage(value, "This line isn't equivalent to the original equation. Check that you used the inverse operation on both sides.")
+            message: wrongMessage(value, "This line isn't equivalent to the original equation. Check that you used the inverse operation on both sides.") + 
+            (reasonFits ? "" : " Also, check your plan: is that the right operation for this step?")
         };
         state.stats.streak = 0;
         state.hadError = true;
@@ -392,12 +472,18 @@ function submitStep(){
 
 function addStep(){
     state.steps.push("");
+    state.reasons.push("");
     create();
     focusLastStep();
 }
 
 
 function focusLastStep(){
+
+    if(state.mode === "guided" && !state.reasons[state.steps.length - 1]){
+        const selects = document.querySelectorAll(".reasonSelect");
+        if(selects.length) { selects[selects.length - 1].focus(); return; }
+    }
     const inputs = document.querySelectorAll(".stepInput");
     if (inputs.length) inputs[inputs.length - 1].focus();
 }
@@ -417,7 +503,7 @@ function recordResults(correct){
 
 function checkFaded(){
     const text = state.fadedAnswer.trim();
-    if (!text) return;
+    if (!text || !state.fadedReason) return;
 
     const steps = state.problem.steps;
     const expected = steps[state.blankIndex];
@@ -441,11 +527,20 @@ function checkFaded(){
     } else {
         // Correct: compare with the example, then reveal the rest of the solution
         const same = text.replace(/\s+/g, "") === expected.equation.replace(/\s+/g, "");
+        const fits = reasonsFor(expected.why, state.variable).includes(state.fadedReason);
+        if(same && !fits){
+            
+            state.fadedResult = {status: "invalid", message: `Your step is right, but "${reasonLabel(state.fadedReason)}" isn't what you did. Pick the reason that matches your step.`};
+            create();
+            focusFadedInput();
+            return;
+        }
         state.fadedResult = {
             status: "correct",
             message: same
                 ? `Correct! (${expected.why})`
-                : `Correct! The example wrote: ${expected.equation} (${expected.why}).`
+                : `Correct! The example wrote: ${expected.equation} (${expected.why}).` +
+                (fits ? "" : " Your way works too.")
         };
         state.solved = true;
     }
@@ -459,6 +554,10 @@ function previousLine(){
 }
 
 function focusFadedInput(){
+    if(!state.fadedReason){
+        const select = document.querySelector(".reasonSelect");
+        if(select){ select.focus(); return;}
+    }
     const input = document.querySelector(".stepInput");
     if(input) input.focus();
 }
@@ -665,10 +764,22 @@ function create(){
             if (event.key === "Enter") submitStep();
         });
 
-        row.append(number, input);
-        list.append(row);
 
+        if(state.mode === "guided"){
+            const select = reasonSelect(state.reasons[i], (value) => {
+                state.reasons[i] = value;
+                state.results[i] = null;
+                input.disabled = state.solved || !value;
+                if(value) input.focus();
+            });
+            input.disabled = state.solved || !state.reasons[i];
+            row.append(number, select, input);
+        } else{
+            row.append(number, input);
+        }
+        list.append(row);
         
+
         if(result && result.message){
             const feedback = document.createElement("p");
             feedback.className = "stepFeedback " + result.status;
@@ -710,7 +821,15 @@ function drawFaded(list){
             input.addEventListener("keydown", (event) => {
                 if (event.key === "Enter") checkFaded();
             });
-            row.append(input);
+
+            const select = reasonSelect(state.fadedReason, (value) => {
+                state.fadedReason = value;
+                state.fadedResult = null;
+                input.disabled = state.solved || !value;
+                if(value) input.focus();
+            });
+            input.disabled = state.solved || !state.fadedReason;
+            row.append(select, input);
             list.append(row);
  
             if (state.fadedResult) {

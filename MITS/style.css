@@ -427,3 +427,11 @@ button:focus-visible{
     border: 1px solid var(--border-accent);
     border-radius: 8px;
 }
+
+.reasonSelect:focus{
+    outline: none;
+    border-color: var(--accent-soft);
+}
+.stepInput:disabled{
+    opacity: 0.6;
+}
