@@ -32,6 +32,7 @@ const state= {
     missStreak: 0,
     modeNotice: "",
     errorCounts: {},
+    referral: null,
     stats: {solved: 0, streak: 0, correct: 0, attempts: 0}
 };
 
@@ -104,6 +105,7 @@ function loadProblem(index){
     state.hadError = false;
     state.hintsUsed = 0;
     state.revealed = 0;
+    state.referral = null;
     
     const stepCount = (problem.steps || []).length;
     state.blankIndex = Math.max(0, stepCount - 1 - state.fadedDone);
@@ -266,18 +268,45 @@ function diagnose(value){
 
 
 
+
 const ERROR_LIMIT = 3;
+const  TEACHER_EMAIL = "jmayerak3@gatech.edu";
+
+const LESSON_NAMES = {
+    "one-step": "One-Step Equations",
+    "two-step": "Two-Step Equations",
+    "multi-step-1": "Multi-Step Equations, Part 1",
+    "multi-step-2": "Multi-Step Equations, Part 2"
+};
 
 function recordError(id){
     const key = id || "unrecognized";
     state.errorCounts[key] = (state.errorCounts[key] || 0) + 1;
     if (state.errorCounts[key] % ERROR_LIMIT !== 0) return "";
+    state.referral = {
+        mistake: id ? misconceptions[id].label : "Steps that weren't equivalent to the original equation",
+        equation: state.equation,
+        count: state.errorCounts[key]
+    };
     const what = id ? "this same kind of mistake" : `${ERROR_LIMIT} steps that weren't equivalent`;
     const count = id ? ` ${ERROR_LIMIT} times` : "";
-    return ` You've made ${what}${count}. eSchool: book office hours with your teacher. ` + 
-           `Summer school or credit recovery: ask your content teacher.`;
+    return ` You've made ${what}${count}. See the help box above.`;
 }
 
+
+function teacherEmailLink(){
+    const r = state.referral;
+    const subject = `MITSy help request: ${LESSON_NAMES[state.lesson]}`;
+    const body = 
+        `Hi, \n\n` + 
+        `I'm working on ${LESSON_NAMES[state.lesson]} in MITSy and I keep making the same kind of mistake.\n\n` +
+        `Mistake: ${r.mistake}\n` +
+        `Problem I'm working on: ${r.equation}\n` + 
+        `Times it happened: ${r.count}\n\n` + 
+        `Could you help me with this?\n\n` + 
+        `My name: `;
+    return `mailto:${TEACHER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
 
 function wrongMessage(value, general){
     const id = diagnose(value);
@@ -819,6 +848,22 @@ function drawMastery(){
     const hintBtn = document.getElementById("hintBtn");
     hintBtn.hidden = state.mode !== "guided";
     hintBtn.disabled = state.solved || state.hintsUsed >= list.length;
+
+
+    const help = document.getElementById("referralBox");
+    help.innerHTML = "";
+    help.hidden = !state.referral;
+    if(state.referral){
+        const text = document.createElement("p");
+        text.textContent = "Need help? You've made this kind of mistake a few times. " + 
+        "eSchool: book office hours with your teacher. Summer school or credit recovery: ask your content teacher.";
+        const link = document.createElement("a");
+        link.className = "btn btnOne";
+        link.href = teacherEmailLink();
+        link.target = "_blank";
+        link.textContent = "Email my teacher";
+        help.append(text, link);
+    }
 }
 
 
