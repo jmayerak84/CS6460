@@ -401,3 +401,37 @@ button:focus-visible{
     font-size: 0.85rem;
     color: var(--accent-soft);
 }
+
+.referralBox{
+    margin-top: 10px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    background: var(--accent-dark);
+    border: 1px solid var(--accent-soft);
+    border-radius: 8px;
+}
+.referralBox p{
+    margin: 0 0 8px;
+}
+.referralBox a{
+    text-decoration: none;
+}
+
+.reasonSelect{
+    flex-shrink: 0;
+    max-width: 230px;
+    padding: 9px 8px;
+    font: 0.85rem var(--fonts);
+    color: var(--text);
+    background: var(--header-bg);
+    border: 1px solid var(--border-accent);
+    border-radius: 8px;
+}
+
+.reasonSelect:focus{
+    outline: none;
+    border-color: var(--accent-soft);
+}
+.stepInput:disabled{
+    opacity: 0.6;
+}

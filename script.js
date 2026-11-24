@@ -31,6 +31,10 @@ const state= {
     guidedStreak: 0,
     missStreak: 0,
     modeNotice: "",
+    errorCounts: {},
+    referral: null,
+    reasons: [],
+    fadedReason: "",
     stats: {solved: 0, streak: 0, correct: 0, attempts: 0}
 };
 
@@ -50,6 +54,7 @@ const MASTERY_WINDOW = 5;
 const MASTERY_NEEDED = 4;
 
 let hints = {};
+let misconceptions = {};
 const GUIDED_TO_MASTERY = 2;
 const MASTERY_TO_GUIDED = 2;
 const FADED_TO_GUIDED = 2;
@@ -67,14 +72,16 @@ function modeAfterWorked(){
 async function loadData(){
     const lesson = new URLSearchParams(window.location.search).get("lesson") || "one-step";
     state.lesson = LESSON_FILES[lesson] ? lesson : "one-step";
-    const [problemRes, codeRes, hintRes] = await Promise.all([
+    const [problemRes, codeRes, hintRes, misconRes] = await Promise.all([
         fetch(LESSON_FILES[state.lesson]),
         fetch("completion_codes.json"),
-        fetch("hints.json")
+        fetch("hints.json"),
+        fetch("misconceptions.json")
     ]);
     problems = await problemRes.json();
     lessonCodes = await codeRes.json();
     hints = await hintRes.json();
+    misconceptions = await misconRes.json();
     loadProblem(randomProblemIndex());
 }
 
@@ -100,6 +107,9 @@ function loadProblem(index){
     state.hadError = false;
     state.hintsUsed = 0;
     state.revealed = 0;
+    state.referral = null;
+    state.reasons = [];
+    state.fadedReason = "";
     
     const stepCount = (problem.steps || []).length;
     state.blankIndex = Math.max(0, stepCount - 1 - state.fadedDone);
@@ -183,6 +193,195 @@ function isSolvedLine(line, variable){
 
 
 
+
+
+const N = String.raw`\(?-?\d+\)?`;
+const num = t => Number(t.replace(/[()]/g, ""));
+
+function problemParts(problem){
+    const v = problem.variable;
+    const [left, right] = problem.equation.replace(/\s+/g, "").split("=");
+    const side = left.includes(v) ? left : right;
+    const c = num(left.includes(v) ? right : left);
+    const m = (pattern) => side.match(new RegExp("^" + pattern.replaceAll("V", v).replaceAll("N", "(" + N + ")") + "$"));
+    let r;
+    switch(problem.form){
+        case "addition":
+            if((r = m("V\\+N"))) return {c, a: num(r[1])};
+            if((r = m("N\\+V"))) return {c, a: num(r[1])};
+            break;
+        case "subtraction":    if ((r = m("V-N"))) return {c, a: num(r[1])}; break;
+        case "multiplication": if ((r = m("NV")))  return {c, a: num(r[1])}; break;
+        case "division":       if ((r = m("V/N"))) return {c, a: num(r[1])}; break;
+        case "multiplication-addition":
+            if ((r = m("NV\\+N"))) return {c, a: num(r[1]), k: num(r[2])};
+            if ((r = m("N\\+NV"))) return {c, a: num(r[2]), k: num(r[1])};
+            break;
+        case "multiplication-subtraction":
+            if ((r = m("NV-N"))) return {c, a: num(r[1]), k: -num(r[2])}; break;
+        case "division-addition":
+            if ((r = m("V/N\\+N"))) return {c, d: num(r[1]), k: num(r[2])};
+            if ((r = m("N\\+V/N"))) return {c, d: num(r[2]), k: num(r[1])};
+            break;
+        case "division-subtraction":
+            if ((r = m("V/N-N"))) return {c, d: num(r[1]), k: -num(r[2])}; break;
+        case "grouped-addition":
+            if ((r = m("\\(V\\+N\\)/N"))) return {c, k: num(r[1]), d: num(r[2])};
+            if ((r = m("\\(N\\+V\\)/N"))) return {c, k: num(r[1]), d: num(r[2])};
+            break;
+        case "grouped-subtraction":
+            if ((r = m("\\(V-N\\)/N"))) return {c, k: -num(r[1]), d: num(r[2])}; break;
+    }
+    return null;
+}
+
+
+function mistakeValues(problem){
+    const p = problemParts(problem);
+    if (!p) return [];
+    const {c, a, d, k} = p;
+    const answer = toNumber(problem.solution);
+    switch (problem.form){
+        case "addition":       return [["wrong-inverse", c + a], ["one-side-only", c], ["reversed-order", a - c], ["integer-sign-error", -answer]];
+        case "subtraction":    return [["wrong-inverse", c - a], ["one-side-only", c], ["integer-sign-error", -answer]];
+        case "multiplication": return [["wrong-inverse", c * a], ["one-side-only", c], ["reversed-order", a / c], ["treats-coefficient-as-term", c - a], ["integer-sign-error", -answer]];
+        case "division":       return [["wrong-inverse", c / a], ["one-side-only", c], ["treats-coefficient-as-term", c + a], ["integer-sign-error", -answer]];
+        case "multiplication-addition":
+        case "multiplication-subtraction":
+            return [["wrong-inverse", (c + k) / a], ["wrong-inverse", (c - k) * a], ["one-side-only", c / a], ["wrong-order", c / a - k], ["integer-sign-error", -answer]];
+        case "division-addition":
+        case "division-subtraction":
+            return [["wrong-inverse", (c + k) * d], ["wrong-inverse", (c - k) / d], ["one-side-only", c * d], ["wrong-order", c * d - k], ["integer-sign-error", -answer]];
+        case "grouped-addition":
+        case "grouped-subtraction":
+            return [["wrong-order", (c - k) * d], ["wrong-inverse", c * d + k], ["wrong-inverse", c / d - k], ["integer-sign-error", -answer]];
+    }
+    return [];
+}
+
+
+function diagnose(value){
+    const answer = toNumber(state.problem.solution);
+    const matches = mistakeValues(state.problem)
+        .filter(([id, v]) => Number.isFinite(v) && !sameValue(v, answer) && sameValue(v, value) && misconceptions[id])
+        .map(([id]) => id);
+    if (matches.length === 0) return null;
+    matches.sort((x, y) => misconceptions[x].priority - misconceptions[y].priority);
+    return matches[0];
+}
+
+
+
+
+const ERROR_LIMIT = 3;
+const  TEACHER_EMAIL = "jmayerak3@gatech.edu";
+
+const LESSON_NAMES = {
+    "one-step": "One-Step Equations",
+    "two-step": "Two-Step Equations",
+    "multi-step-1": "Multi-Step Equations, Part 1",
+    "multi-step-2": "Multi-Step Equations, Part 2"
+};
+
+function recordError(id){
+    const key = id || "unrecognized";
+    state.errorCounts[key] = (state.errorCounts[key] || 0) + 1;
+    if (state.errorCounts[key] % ERROR_LIMIT !== 0) return "";
+    state.referral = {
+        mistake: id ? misconceptions[id].label : "Steps that weren't equivalent to the original equation",
+        equation: state.equation,
+        count: state.errorCounts[key]
+    };
+    const what = id ? "this same kind of mistake" : `${ERROR_LIMIT} steps that weren't equivalent`;
+    const count = id ? ` ${ERROR_LIMIT} times` : "";
+    return ` You've made ${what}${count}. See the help box above.`;
+}
+
+
+function teacherEmailLink(){
+    const r = state.referral;
+    const subject = `MITSy help request: ${LESSON_NAMES[state.lesson]}`;
+    const body = 
+        `Hi, \n\n` + 
+        `I'm working on ${LESSON_NAMES[state.lesson]} in MITSy and I keep making the same kind of mistake.\n\n` +
+        `Mistake: ${r.mistake}\n` +
+        `Problem I'm working on: ${r.equation}\n` + 
+        `Times it happened: ${r.count}\n\n` + 
+        `Could you help me with this?\n\n` + 
+        `My name: `;
+    return `mailto:${TEACHER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function wrongMessage(value, general){
+    const id = diagnose(value);
+    const referral = recordError(id);
+    if (!id) return general + referral;
+    return misconceptions[id].feedback
+        .replaceAll("{variable}", state.variable)
+        .replaceAll("{side}", state.problem.variableSide) + referral;
+}
+
+
+
+const REASONS = [
+    {id: "add", label: "Add to both sides"},
+    {id: "subtract", label: "Subtract from both sides"},
+    {id: "multiply", label: "Multiply both sides"},
+    {id: "divide", label: "Divide both sides"},
+    {id: "distribute", label: "Distribute"},
+    {id: "combine", label: "Combine like terms"},
+    {id: "move", label: "Move variable terms to one side"}
+];
+
+const reasonLabel = id => (REASONS.find(r => r.id === id) || {}).label || "";
+const squash = text => text.replace(/\s+/g, "");
+
+
+
+function reasonsFor(why, variable){
+    const w = why.toLowerCase();
+    const term = why.split(" ")[1] || "";
+    if(w.startsWith("distribute")) return ["distribute"];
+    if(w.startsWith("combine")) return ["combine"];
+    if(w.startsWith("multiply")) return ["multiply"];
+    if(w.startsWith("divide")) return ["divide"];
+    if(w.startsWith("add") || w.startsWith("subtract")){
+        const op = w.startsWith("add") ? "add" : "subtract";
+        const ids = [op];
+        if(term.includes(variable)) ids.push("move");
+        if(term.startsWith("-")) ids.push(op === "add" ? "subtract" : "add");
+        return ids;
+    }
+    return [];
+}
+
+
+function expectedReasons(i){
+    const step = (state.problem.steps || [])[i];
+    return step ? reasonsFor(step.why, state.variable) : [];
+}
+
+
+function reasonSelect(selected, onChoose){
+    const select = document.createElement("select");
+    select.className = "reasonSelect";
+    select.setAttribute("aria-label", "What will you do next?");
+    const prompt = document.createElement("option");
+    prompt.value = "";
+    prompt.textContent = "What will you do next?";
+    select.append(prompt);
+    REASONS.forEach(r => {
+        const option = document.createElement("option");
+        option.value = r.id;
+        option.textContent  = r.label;
+        select.append(option);
+    });
+    select.value = selected || "";
+    select.disabled  = state.solved;
+    select.addEventListener("change", () => onChoose(select.value, select));
+    return select;
+}
+
 function checkStep(i){
     const text = state.steps[i].trim();
     if(!text) return false;
@@ -199,6 +398,21 @@ function checkStep(i){
         return false;
     }
 
+
+
+
+    const worked = state.problem.steps || [];
+    const onPath = state.steps.slice(0, i).every((line, j) => worked[j] && squash(line) === squash(worked[j].equation));
+    const expected = onPath ? expectedReasons(i) : [];
+    const workedLine = onPath ? worked[i] : null;
+    const reason = state.reasons[i];
+    const reasonFits = expected.length === 0 || expected.includes(reason);
+    if(sameValue(value, answer) && !reasonFits && workedLine && squash(text) === squash(workedLine.equation)){
+        state.results[i] = {status: "invalid", message: `Your step is right, but "${reasonLabel(reason)}" isn't what you did. Pick the reason that matches your step.`};
+        return false;
+    }
+    const planNote = reasonFits ? "" : ` That works. The worked solution used "${reasonLabel(expected[0])}" here.`;
+
     state.stats.attempts++;
     if(sameValue(value, answer)){
         state.stats.correct++;
@@ -207,15 +421,16 @@ function checkStep(i){
             state.stats.solved++;
             state.stats.streak++;
             finishProblem(!state.hadError && state.hintsUsed === 0);
-            state.results[i] = {status: "correct", message: `Solved! ${state.variable} = ${state.problem.solution}. Click "New Problem" to keep practicing.`};
+            state.results[i] = {status: "correct", message: `Solved! ${state.variable} = ${state.problem.solution}.${planNote} Click "New Problem" to keep practicing.`};
         } else{
-            state.results[i] = {status: "correct", message: "Valid step. Keep Going."};
+            state.results[i] = {status: "correct", message: "Valid step. Keep Going." + planNote};
         }
     } else {
         
         state.results[i] = {
             status: "wrong",
-            message: "This line isn't equivalent to the original equation. Check that you used the inverse operation on both sides."
+            message: wrongMessage(value, "This line isn't equivalent to the original equation. Check that you used the inverse operation on both sides.") + 
+            (reasonFits ? "" : " Also, check your plan: is that the right operation for this step?")
         };
         state.stats.streak = 0;
         state.hadError = true;
@@ -257,12 +472,18 @@ function submitStep(){
 
 function addStep(){
     state.steps.push("");
+    state.reasons.push("");
     create();
     focusLastStep();
 }
 
 
 function focusLastStep(){
+
+    if(state.mode === "guided" && !state.reasons[state.steps.length - 1]){
+        const selects = document.querySelectorAll(".reasonSelect");
+        if(selects.length) { selects[selects.length - 1].focus(); return; }
+    }
     const inputs = document.querySelectorAll(".stepInput");
     if (inputs.length) inputs[inputs.length - 1].focus();
 }
@@ -282,7 +503,7 @@ function recordResults(correct){
 
 function checkFaded(){
     const text = state.fadedAnswer.trim();
-    if (!text) return;
+    if (!text || !state.fadedReason) return;
 
     const steps = state.problem.steps;
     const expected = steps[state.blankIndex];
@@ -293,7 +514,7 @@ function checkFaded(){
     if (value === null) {
         state.fadedResult = {status: "invalid", message: `I can't read this line. Write one equation with a single = sign using ${state.variable}.`};
     } else if (!sameValue(value, answer)) {
-        state.fadedResult = {status: "wrong", message: "This step isn't equivalent to the line above it. Look at the line above and think about what comes next."};
+        state.fadedResult = {status: "wrong", message: wrongMessage(value, "This step isn't equivalent to the line above it. Look at the line above and think about what comes next.")};
     } else if (!isLastStep && isSolvedLine(text, state.variable)) {
         // No skipping ahead to the final answer from a middle step
         state.fadedResult = {status: "invalid", message: "That's the final answer. What step comes before it?"};
@@ -306,11 +527,20 @@ function checkFaded(){
     } else {
         // Correct: compare with the example, then reveal the rest of the solution
         const same = text.replace(/\s+/g, "") === expected.equation.replace(/\s+/g, "");
+        const fits = reasonsFor(expected.why, state.variable).includes(state.fadedReason);
+        if(same && !fits){
+            
+            state.fadedResult = {status: "invalid", message: `Your step is right, but "${reasonLabel(state.fadedReason)}" isn't what you did. Pick the reason that matches your step.`};
+            create();
+            focusFadedInput();
+            return;
+        }
         state.fadedResult = {
             status: "correct",
             message: same
                 ? `Correct! (${expected.why})`
-                : `Correct! The example wrote: ${expected.equation} (${expected.why}).`
+                : `Correct! The example wrote: ${expected.equation} (${expected.why}).` +
+                (fits ? "" : " Your way works too.")
         };
         state.solved = true;
     }
@@ -324,6 +554,10 @@ function previousLine(){
 }
 
 function focusFadedInput(){
+    if(!state.fadedReason){
+        const select = document.querySelector(".reasonSelect");
+        if(select){ select.focus(); return;}
+    }
     const input = document.querySelector(".stepInput");
     if(input) input.focus();
 }
@@ -363,7 +597,7 @@ function submitSolution(){
         }
         if(!sameValue(value, answer)){
 
-            state.results[i] = {status: "wrong", message: "This is the first line that isn't equivalent to the original equation. Check the step that led to it."};
+            state.results[i] = {status: "wrong", message: "This is the first line that isn't equivalent to the original equation. Check the step that led to it." + recordError(diagnose(value))};
             state.stats.attempts++;
             state.stats.streak = 0;
             state.hadError = true;
@@ -530,10 +764,22 @@ function create(){
             if (event.key === "Enter") submitStep();
         });
 
-        row.append(number, input);
-        list.append(row);
 
+        if(state.mode === "guided"){
+            const select = reasonSelect(state.reasons[i], (value) => {
+                state.reasons[i] = value;
+                state.results[i] = null;
+                input.disabled = state.solved || !value;
+                if(value) input.focus();
+            });
+            input.disabled = state.solved || !state.reasons[i];
+            row.append(number, select, input);
+        } else{
+            row.append(number, input);
+        }
+        list.append(row);
         
+
         if(result && result.message){
             const feedback = document.createElement("p");
             feedback.className = "stepFeedback " + result.status;
@@ -575,7 +821,15 @@ function drawFaded(list){
             input.addEventListener("keydown", (event) => {
                 if (event.key === "Enter") checkFaded();
             });
-            row.append(input);
+
+            const select = reasonSelect(state.fadedReason, (value) => {
+                state.fadedReason = value;
+                state.fadedResult = null;
+                input.disabled = state.solved || !value;
+                if(value) input.focus();
+            });
+            input.disabled = state.solved || !state.fadedReason;
+            row.append(select, input);
             list.append(row);
  
             if (state.fadedResult) {
@@ -713,6 +967,22 @@ function drawMastery(){
     const hintBtn = document.getElementById("hintBtn");
     hintBtn.hidden = state.mode !== "guided";
     hintBtn.disabled = state.solved || state.hintsUsed >= list.length;
+
+
+    const help = document.getElementById("referralBox");
+    help.innerHTML = "";
+    help.hidden = !state.referral;
+    if(state.referral){
+        const text = document.createElement("p");
+        text.textContent = "Need help? You've made this kind of mistake a few times. " + 
+        "eSchool: book office hours with your teacher. Summer school or credit recovery: ask your content teacher.";
+        const link = document.createElement("a");
+        link.className = "btn btnOne";
+        link.href = teacherEmailLink();
+        link.target = "_blank";
+        link.textContent = "Email my teacher";
+        help.append(text, link);
+    }
 }
 
 
